@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="聯絡我們 | Markforged 台灣" data-en="Contact Us | Markforged Taiwan">聯絡我們 | Markforged 台灣</title>
+<meta name="description" data-zh="聯絡 Markforged 台灣，預約免費樣品列印、產品演示與技術諮詢。" data-en="Contact Markforged Taiwan for free sample printing, product demos, and technical consultation." content="聯絡 Markforged 台灣">
+<link rel="canonical" href="https://www.markforged.tw/contact.html">
+<link rel="icon" type="image/svg+xml" href="images/markforged-logo.svg">
+<link rel="stylesheet" href="shared.css?v=20260328b">
+</head>
+<body>
+<div id="nav-slot"></div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="section-inner">
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a data-en='Home' data-zh='首頁' href='/'>首頁</a>
+      <span data-zh="聯絡我們" data-en="Contact Us">聯絡我們</span>
+    </nav>
+    <p class="section-label" data-zh="聯絡我們" data-en="Contact Us">聯絡我們</p>
+    <h1 data-zh="讓我們開始<em>合作</em>" data-en="Let's Start <em>Working Together</em>">讓我們開始<em>合作</em></h1>
+    <p data-zh="無論是產品諮詢、免費樣品列印或技術支援，我們都期待與您聯繫。" data-en="Whether it's product inquiry, free sample printing, or technical support — we look forward to connecting with you.">無論是產品諮詢、免費樣品列印或技術支援，我們都期待與您聯繫。</p>
+  </div>
+</div>
+
+<!-- CONTACT FORM + INFO -->
+<section style="background:#fff;">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <!-- FORM -->
+      <div>
+        <p class="section-label" data-zh="填寫詢價表單" data-en="Submit Inquiry Form">填寫詢價表單</p>
+        <h2 class="section-title" style="font-size:clamp(22px,3vw,32px);" data-zh="立即詢價 / <span class='hl'>預約演示</span>" data-en="Request a Quote / <span class='hl'>Book a Demo</span>">立即詢價 / <span class='hl'>預約演示</span></h2>
+        <div class="yellow-bar"></div>
+        <form id="contact-form" action="https://formspree.io/f/mjgpbewl" method="POST">
+          <input type="hidden" name="_next" value="https://www.markforged.tw/thanks.html">
+          <input type="hidden" name="_subject" value="【Markforged 台灣】新詢價表單">
+          <input type="text" name="_gotcha" style="display:none">
+          <div class="form-row">
+            <div class="form-group">
+              <label data-zh="姓名 *" data-en="Name *">姓名 *</label>
+              <input type="text" name="name" required data-ph-zh="您的姓名" data-ph-en="Your name" placeholder="您的姓名">
+            </div>
+            <div class="form-group">
+              <label data-zh="公司名稱 *" data-en="Company *">公司名稱 *</label>
+              <input type="text" name="company" required data-ph-zh="公司名稱" data-ph-en="Company name" placeholder="公司名稱">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label data-zh="電子郵件 *" data-en="Email *">電子郵件 *</label>
+              <input type="email" name="email" required data-ph-zh="your@email.com" data-ph-en="your@email.com" placeholder="your@email.com">
+            </div>
+            <div class="form-group">
+              <label data-zh="電話" data-en="Phone">電話</label>
+              <input type="tel" name="phone" data-ph-zh="電話號碼" data-ph-en="Phone number" placeholder="電話號碼">
+            </div>
+          </div>
+          <div class="form-group">
+            <label data-zh="職稱" data-en="Job Title">職稱</label>
+            <input type="text" name="title" data-ph-zh="您的職稱" data-ph-en="Your job title" placeholder="您的職稱">
+          </div>
+          <div class="form-group">
+            <label data-zh="感興趣的產品" data-en="Products of Interest">感興趣的產品</label>
+            <select name="product">
+              <option value="" data-zh="請選擇..." data-en="Please select...">請選擇...</option>
+              <option value="FX10" data-zh="FX10（複合材料 + 金屬）" data-en="FX10 (Composite + Metal)">FX10（複合材料 + 金屬）</option>
+              <option value="FX10+MetalKit" data-zh="FX10 + Metal Kit 套組" data-en="FX10 + Metal Kit Bundle">FX10 + Metal Kit 套組</option>
+              <option value="FX20" data-zh="FX20（大型高溫工業機）" data-en="FX20 (Large High-Temp)">FX20（大型高溫工業機）</option>
+              <option value="PX100" data-zh="PX100（高速金屬量產）" data-en="PX100 (High-Volume Metal)">PX100（高速金屬量產）</option>
+              <option value="multiple" data-zh="多台 / 整體方案" data-en="Multiple / Full Solution">多台 / 整體方案</option>
+              <option value="other" data-zh="其他 / 不確定" data-en="Other / Not Sure">其他 / 不確定</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label data-zh="需求說明" data-en="Inquiry Details">需求說明</label>
+            <textarea name="message" rows="5" data-ph-zh="請描述您的應用場景、材料需求或任何問題..." data-ph-en="Describe your application, material needs, or any questions..." placeholder="請描述您的應用場景、材料需求或任何問題..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%;text-align:center;cursor:pointer;" data-zh="送出詢價" data-en="Submit Inquiry">送出詢價</button>
+        </form>
+      </div>
+
+      <!-- INFO SIDEBAR -->
+      <div>
+        <!-- Contact Card -->
+        <div class="info-card" style="margin-bottom:24px;">
+          <h3 data-zh="聯絡方式" data-en="Contact Information">聯絡方式</h3>
+          <div class="info-item">
+            <span class="info-icon"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="12" r="6" stroke="#FFC500" stroke-width="1.8"/><path d="M6 32 C6 25 11 20 18 20 C25 20 30 25 30 32" stroke="#FFC500" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+            <div class="info-text">
+              <strong>Brian Chen</strong><br>
+              <span style="color:#888;font-size:12px;">Country Manager, Greater China</span>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="9" width="28" height="18" rx="2" stroke="#FFC500" stroke-width="1.8"/><polyline points="4,9 18,20 32,9" stroke="#FFC500" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+            <div class="info-text">
+              <a href="mailto:brian.chen@markforged.com" style="display:inline-block;padding:8px 18px;background:#FFC500;color:#000;font-weight:700;font-size:13px;text-decoration:none;letter-spacing:0.5px;" data-zh="傳送郵件" data-en="Send Email">傳送郵件</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <span class="info-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="3" width="16" height="12" rx="2" stroke="#FFC500" stroke-width="1.5"/><path d="M6 15 L6 18 L10 15" stroke="#FFC500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div class="info-text">
+              LINE：<a href="https://line.me/ti/p/@markforged" target="_blank" style="color:#FFC500;font-weight:700;text-decoration:none;">@markforged</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="info-card" style="margin-bottom:24px;">
+          <h3 data-zh="快速連結" data-en="Quick Links">快速連結</h3>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <a data-en='Products Overview' data-zh='產品總覽' href='/products' onmouseout='this.style.borderColor=\'transparent\';this.style.color=\'#ccc\'' onmouseover='this.style.borderColor=\'#FFC500\';this.style.color=\'#FFC500\'' style='display:block;padding:12px 16px;background:#111;color:#ccc;text-decoration:none;font-size:13px;font-weight:600;transition:all .2s;border-left:3px solid transparent;'>產品總覽</a>
+            <a data-en='Solutions' data-zh='解決方案' href='/solutions' onmouseout='this.style.borderColor=\'transparent\';this.style.color=\'#ccc\'' onmouseover='this.style.borderColor=\'#FFC500\';this.style.color=\'#FFC500\'' style='display:block;padding:12px 16px;background:#111;color:#ccc;text-decoration:none;font-size:13px;font-weight:600;transition:all .2s;border-left:3px solid transparent;'>解決方案</a>
+            <a data-en='Customer Cases' data-zh='客戶案例' href='/cases' onmouseout='this.style.borderColor=\'transparent\';this.style.color=\'#ccc\'' onmouseover='this.style.borderColor=\'#FFC500\';this.style.color=\'#FFC500\'' style='display:block;padding:12px 16px;background:#111;color:#ccc;text-decoration:none;font-size:13px;font-weight:600;transition:all .2s;border-left:3px solid transparent;'>客戶案例</a>
+            <a href="https://markforged.com" target="_blank" rel="noopener" style="display:block;padding:12px 16px;background:#111;color:#ccc;text-decoration:none;font-size:13px;font-weight:600;transition:all .2s;border-left:3px solid transparent;" onmouseover="this.style.borderColor='#FFC500';this.style.color='#FFC500'" onmouseout="this.style.borderColor='transparent';this.style.color='#ccc'" data-zh="Markforged 官網" data-en="Markforged Global">Markforged 官網</a>
+          </div>
+        </div>
+
+        <!-- Service Hours -->
+        <div class="info-card">
+          <h3 data-zh="服務時間" data-en="Service Hours">服務時間</h3>
+          <div style="font-size:14px;color:#aaa;line-height:2;">
+            <div data-zh="台灣 GMT+8" data-en="Taiwan GMT+8">台灣 GMT+8</div>
+            <div data-zh="週一至週五 09:00 – 18:00" data-en="Mon – Fri 09:00 – 18:00">週一至週五 09:00 – 18:00</div>
+            <div style="margin-top:8px;color:#555;font-size:12px;" data-zh="* 緊急技術問題可透過 LINE 即時聯繫" data-en="* Urgent tech issues: contact via LINE anytime">* 緊急技術問題可透過 LINE 即時聯繫</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="section-inner">
+    <p class="eyebrow" data-zh="免費試用" data-en="Free Trial">免費試用</p>
+    <h2 data-zh="提供免費樣品列印測試" data-en="Free Sample Print Testing Available">提供免費樣品列印測試</h2>
+    <p data-zh="寄送您的 3D 模型檔案（STL / STEP），我們將免費為您列印測試樣品，讓您親手驗證零件品質。" data-en="Send us your 3D model files (STL/STEP) and we'll print free test samples so you can evaluate part quality firsthand.">寄送您的 3D 模型檔案（STL / STEP），我們將免費為您列印測試樣品，讓您親手驗證零件品質。</p>
+    <a class='btn-dark' data-en='Contact Us' data-zh='立即聯繫' href='/contact'>立即聯繫</a>
+  </div>
+</section>
+
+<div id="footer-slot"></div>
+<script src="shared.js?v=20260328b"></script>
+</body>
+</html>
