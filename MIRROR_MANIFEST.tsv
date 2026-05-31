@@ -1,0 +1,78 @@
+url	path	bytes	sha1	content_type
+https://www.markforged.tw/	index.html	30352	42c32fb58d294824037aa0bb0aaa48491e85a1d6	text/html; charset=UTF-8
+https://www.markforged.tw/products.html	products.html	13287	d78ace451deae973daf79c10c53e0b8ee7a74169	text/html; charset=UTF-8
+https://www.markforged.tw/fx10.html	fx10.html	15443	d1f2ca0f29c287dad0040fbfb94e9e1f78fa1906	text/html; charset=UTF-8
+https://www.markforged.tw/fx20.html	fx20.html	15844	0f3711d49a1cff4021f8fdf6ff87abe8e5d0d531	text/html; charset=UTF-8
+https://www.markforged.tw/px100.html	px100.html	15474	76d2145f24e2f511539f19f6ac6e788dcb392de9	text/html; charset=UTF-8
+https://www.markforged.tw/solutions.html	solutions.html	10733	5116a55886359560bde3d9e308ad6cbfb132ca63	text/html; charset=UTF-8
+https://www.markforged.tw/cases.html	cases.html	21851	419a4ea39bd190cfed6c8a7260baa55a65f8e335	text/html; charset=UTF-8
+https://www.markforged.tw/about.html	about.html	18279	41dd594019cd2f4c57c14aaee2247801744800ae	text/html; charset=UTF-8
+https://www.markforged.tw/contact.html	contact.html	11470	d0ebee542d73d6db97c176d532f36593aec074ed	text/html; charset=UTF-8
+https://www.markforged.tw/robots.txt	robots.txt	70	127417b1f742f76ddf37e920207a3c82228b8976	text/plain; charset=UTF-8
+https://www.markforged.tw/sitemap.xml	sitemap.xml	1159	19c05196b085bac18b6466ce08a85eaddaa9538f	application/xml
+https://www.markforged.tw/images/fx20_official.jpg	images/fx20_official.jpg	38750	34e9abe724cb4204d45fd661ec1401eb262b6fd9	image/jpeg
+https://www.markforged.tw/images/prod_fx10.png	images/prod_fx10.png	186086	9ac6e7eaa8c118493b14c75e111d8984fe7ad05e	image/png
+https://www.markforged.tw/images/prod_fx20.png	images/prod_fx20.png	124932	a56b726aa47ba4b2a3000c3ed935e27786ffdf0a	image/png
+https://www.markforged.tw/images/prod_px100.png	images/prod_px100.png	180479	d302f48074afead5027ef08add9e708ed0736077	image/png
+https://www.markforged.tw/shared.js?v=20260328b	shared.js	17875	8801146eea066e598f66ea75d73ab7ee1b452d13	application/javascript; charset=UTF-8
+https://www.markforged.tw/images/favicon-32.png	images/favicon-32.png	134	898cb6a01d76fad7032e973c9c1b789264e57264	image/png
+https://www.markforged.tw/shared.css?v=20260328b	shared.css	23418	6241f57fed1ed16d7d0b4161cf59194a9408f850	text/css; charset=UTF-8
+https://www.markforged.tw/images/brian-quote-zh.mp4	images/brian-quote-zh.mp4	5709700	82c4fc9331dc2eaedddcbf91b0d322c42a4ae1b1	video/mp4
+https://www.markforged.tw/images/brian-quote-en.mp4	images/brian-quote-en.mp4	5842691	f39305f81e0f74cad412c31f22ee2b73cf5249f4	video/mp4
+https://www.markforged.tw/contact	contact.html	11470	d0ebee542d73d6db97c176d532f36593aec074ed	text/html; charset=UTF-8
+https://www.markforged.tw/products	products.html	13287	d78ace451deae973daf79c10c53e0b8ee7a74169	text/html; charset=UTF-8
+https://www.markforged.tw/fx10	fx10.html	15443	d1f2ca0f29c287dad0040fbfb94e9e1f78fa1906	text/html; charset=UTF-8
+https://www.markforged.tw/fx20	fx20.html	15844	0f3711d49a1cff4021f8fdf6ff87abe8e5d0d531	text/html; charset=UTF-8
+https://www.markforged.tw/px100	px100.html	15474	76d2145f24e2f511539f19f6ac6e788dcb392de9	text/html; charset=UTF-8
+https://www.markforged.tw/solutions	solutions.html	10733	5116a55886359560bde3d9e308ad6cbfb132ca63	text/html; charset=UTF-8
+https://www.markforged.tw/cases	cases.html	21851	419a4ea39bd190cfed6c8a7260baa55a65f8e335	text/html; charset=UTF-8
+https://www.markforged.tw/images/x7fe_hero.png	images/x7fe_hero.png	214053	a5b6b2ef1f625fa89cb2320161c80ca5db7170c6	image/png
+https://www.markforged.tw/x7fe	x7fe.html	4890	65ec561f6e85a9f6ec6010a727465ba323e82f09	text/html; charset=UTF-8
+https://www.markforged.tw/images/markforged-logo.svg	images/markforged-logo.svg	258	20170e52bd75654712b0365473c83dfb990c95c5	image/svg+xml
+https://www.markforged.tw/images/ind_aerospace.jpg	images/ind_aerospace.jpg	340810	ff11cd3596ba28bba672a2309d675351ee56bd40	image/jpeg
+https://www.markforged.tw/images/ind_automotive.jpg	images/ind_automotive.jpg	395086	7285c96b0627f774014091c73edfe96de78d4d55	image/jpeg
+https://www.markforged.tw/images/defense_hero.jpg	images/defense_hero.jpg	543948	4cb4b7fc4ebe21d5022a0f59c4402122479483e7	image/jpeg
+https://www.markforged.tw/images/ind_industrial.jpg	images/ind_industrial.jpg	267444	1af69587512a3e1d5b80545f1480bbd07c03ed4f	image/jpeg
+https://www.markforged.tw/images/ind_medical_official.jpg	images/ind_medical_official.jpg	183303	abeb1ec0ebf99b805d84f3b45c057d8c03d9b280	image/jpeg
+https://www.markforged.tw/images/ind_electronics.jpg	images/ind_electronics.jpg	163849	df0852ae5ac8a1f78d78da0bfc45184415a87055	image/jpeg
+https://www.markforged.tw/images/ind_energy.jpg	images/ind_energy.jpg	155261	efb06bde45164223748576693154648fa1f756b0	image/jpeg
+https://www.markforged.tw/images/ind_education.jpg	images/ind_education.jpg	446694	4cdd5b9a05e02b79403efd3003dc53b164b0b8b4	image/jpeg
+https://www.markforged.tw/images/ind_cpg_official.jpg	images/ind_cpg_official.jpg	1611591	26eb12ba65b59a3efbf806ac581f3948681007ca	image/jpeg
+https://www.markforged.tw/images/ind_food_official.jpg	images/ind_food_official.jpg	1263805	094a0c527a649d3e9aee91978c8c301f6fd95926	image/jpeg
+https://www.markforged.tw/images/ind_packaging_official.jpg	images/ind_packaging_official.jpg	1053274	2ab461a2588d523cf5a8022575e4527c06d297b0	image/jpeg
+https://www.markforged.tw/images/ind_product_dev_official.jpg	images/ind_product_dev_official.jpg	107402	270d0ac2cb3a944bf29e8cd15282a7522f21f9cf	image/jpeg
+https://www.markforged.tw/aerospace	aerospace.html	4549	e2ad07f547da3ef36eb71e9992c6a1d26d0a3b36	text/html; charset=UTF-8
+https://www.markforged.tw/automotive	automotive.html	4424	97ecbe5e80c841fb39981366c23ba7daeda7f860	text/html; charset=UTF-8
+https://www.markforged.tw/defense	defense.html	4421	494053ef0184e63bbd0ae94d6f95bccd1750baf3	text/html; charset=UTF-8
+https://www.markforged.tw/industrial	industrial.html	4407	4e77104fee0cd6fca5b61b1a02d7785a4cfd5f40	text/html; charset=UTF-8
+https://www.markforged.tw/medical	medical.html	4296	628dcc76dcdabd5bc3d6f795ab2018b226b7c708	text/html; charset=UTF-8
+https://www.markforged.tw/electronics	electronics.html	4356	5eea2e7a9f6d257fe9645c225f8c6f53a4f1b980	text/html; charset=UTF-8
+https://www.markforged.tw/energy	energy.html	4296	06f33a308e83a59e1c4b978b2666ff37e0a26689	text/html; charset=UTF-8
+https://www.markforged.tw/education	education.html	4412	6206c2c5a8fd90d7c4dc1ea66d6ad1d36241e700	text/html; charset=UTF-8
+https://www.markforged.tw/cpg	cpg.html	4312	9d698e0ff1361ffd85e2eb0e14cbf37133fe65bb	text/html; charset=UTF-8
+https://www.markforged.tw/food	food.html	4293	c97233c33f54276f75f239d6c09891cf9fd61110	text/html; charset=UTF-8
+https://www.markforged.tw/packaging	packaging.html	4315	06e3340f770a4826ccbf61cd898fe15fd1b4c9f5	text/html; charset=UTF-8
+https://www.markforged.tw/product-dev	product-dev.html	4348	b2f7fbbed7f31c1e1e20271a63b3221d90809e23	text/html; charset=UTF-8
+https://www.markforged.tw/images/case_fig_image_3_963.png	images/case_fig_image_3_963.png	507354	a9781a2b65ae2de68c896f496d99e3838a51f391	image/png
+https://www.markforged.tw/images/case_canon_capture_01.jpg	images/case_canon_capture_01.jpg	98955	5861b7381bd10a28f98e7c00c34df0e21a9dd0d5	image/jpeg
+https://www.markforged.tw/images/case_1_festo.jpg	images/case_1_festo.jpg	74046	c0028d42691b3437ad7aa031847fedfaf89c4752	image/jpeg
+https://www.markforged.tw/images/cs_tmg_lg.jpg	images/cs_tmg_lg.jpg	478424	2e530e6fb6a34c0b8c4695928735cbe6832c1c7d	image/jpeg
+https://www.markforged.tw/images/case_dixie.jpg	images/case_dixie.jpg	119189	3c6e872747fd45e649e6f1ac60cdc3d215d81ae8	image/jpeg
+https://www.markforged.tw/images/cs_sqp_hero_real.jpg	images/cs_sqp_hero_real.jpg	375017	59807ad22ac6d5a2e67910456fa8ae5a1acb88fa	image/jpeg
+https://www.markforged.tw/images/cs_boduk_large_real.jpg	images/cs_boduk_large_real.jpg	284443	24dcdbe970c9208c443e1678f1997ff1757cd2dc	image/jpeg
+https://www.markforged.tw/images/case_untitled_4_2024_04_09_173658_rifg.jpg	images/case_untitled_4_2024_04_09_173658_rifg.jpg	109008	d793f6f2fdc7c543a73a1c891f3eed38a97123fb	image/jpeg
+https://www.markforged.tw/images/case_header.jpg	images/case_header.jpg	89053	7c8681a5259952402e5b2e23a0ac8a22b78a6ae5	image/jpeg
+https://www.markforged.tw/images/case_untitled_5.jpg	images/case_untitled_5.jpg	171854	e42c9acaf18dbbf4144041eee879e2985a0fb394	image/jpeg
+https://www.markforged.tw/x7fe.html	x7fe.html	4890	65ec561f6e85a9f6ec6010a727465ba323e82f09	text/html; charset=UTF-8
+https://www.markforged.tw/aerospace.html	aerospace.html	4549	e2ad07f547da3ef36eb71e9992c6a1d26d0a3b36	text/html; charset=UTF-8
+https://www.markforged.tw/automotive.html	automotive.html	4424	97ecbe5e80c841fb39981366c23ba7daeda7f860	text/html; charset=UTF-8
+https://www.markforged.tw/defense.html	defense.html	4421	494053ef0184e63bbd0ae94d6f95bccd1750baf3	text/html; charset=UTF-8
+https://www.markforged.tw/industrial.html	industrial.html	4407	4e77104fee0cd6fca5b61b1a02d7785a4cfd5f40	text/html; charset=UTF-8
+https://www.markforged.tw/medical.html	medical.html	4296	628dcc76dcdabd5bc3d6f795ab2018b226b7c708	text/html; charset=UTF-8
+https://www.markforged.tw/electronics.html	electronics.html	4356	5eea2e7a9f6d257fe9645c225f8c6f53a4f1b980	text/html; charset=UTF-8
+https://www.markforged.tw/energy.html	energy.html	4296	06f33a308e83a59e1c4b978b2666ff37e0a26689	text/html; charset=UTF-8
+https://www.markforged.tw/education.html	education.html	4412	6206c2c5a8fd90d7c4dc1ea66d6ad1d36241e700	text/html; charset=UTF-8
+https://www.markforged.tw/cpg.html	cpg.html	4312	9d698e0ff1361ffd85e2eb0e14cbf37133fe65bb	text/html; charset=UTF-8
+https://www.markforged.tw/food.html	food.html	4293	c97233c33f54276f75f239d6c09891cf9fd61110	text/html; charset=UTF-8
+https://www.markforged.tw/packaging.html	packaging.html	4315	06e3340f770a4826ccbf61cd898fe15fd1b4c9f5	text/html; charset=UTF-8
+https://www.markforged.tw/product-dev.html	product-dev.html	4348	b2f7fbbed7f31c1e1e20271a63b3221d90809e23	text/html; charset=UTF-8

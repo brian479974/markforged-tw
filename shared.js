@@ -1,77 +1,3 @@
-/* ── Password Gate ─────────────────────────────────────────────── */
-(function(){
-  var KEY = 'mf_access';
-  var PASS = 'MF8888';
-  var EXPIRE_HOURS = 168; // 7 days
-
-  // Check localStorage (persists across tabs/sessions)
-  try {
-    var ts = localStorage.getItem(KEY);
-    if (ts && (Date.now() - parseInt(ts)) < EXPIRE_HOURS * 3600000) return;
-  } catch(e) {}
-
-  // Hide body until auth
-  document.documentElement.style.visibility = 'hidden';
-
-  function showGate() {
-    document.documentElement.style.visibility = 'visible';
-    var style = document.createElement('style');
-    style.textContent = [
-      '#mf-gate{position:fixed;inset:0;background:#000;z-index:99999;display:flex;align-items:center;justify-content:center;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;}',
-      '#mf-gate-box{background:#0d0d0d;border:1px solid #222;border-top:4px solid #FFC500;padding:48px 40px;max-width:360px;width:90%;text-align:center;}',
-      '#mf-gate-logo{font-size:20px;font-weight:900;letter-spacing:4px;color:#FFC500;margin-bottom:6px;}',
-      '#mf-gate-logo span{color:#fff;}',
-      '#mf-gate-sub{font-size:12px;color:#555;letter-spacing:2px;text-transform:uppercase;margin-bottom:32px;}',
-      '#mf-gate-label{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#aaa;margin-bottom:10px;text-align:left;}',
-      '#mf-gate-input{width:100%;padding:14px 16px;background:#1a1a1a;border:1.5px solid #333;color:#fff;font-size:18px;font-weight:700;letter-spacing:4px;text-align:center;border-radius:0;outline:none;box-sizing:border-box;font-family:inherit;}',
-      '#mf-gate-input:focus{border-color:#FFC500;}',
-      '#mf-gate-btn{width:100%;margin-top:16px;background:#FFC500;color:#000;border:none;padding:14px;font-size:14px;font-weight:900;letter-spacing:1px;text-transform:uppercase;cursor:pointer;}',
-      '#mf-gate-btn:hover{background:#e6b000;}',
-      '#mf-gate-err{color:#ff4444;font-size:13px;margin-top:12px;min-height:20px;}'
-    ].join('');
-    document.head.appendChild(style);
-
-    var box = document.createElement('div');
-    box.id = 'mf-gate';
-    box.innerHTML = [
-      '<div id="mf-gate-box">',
-        '<div id="mf-gate-logo">MARK<span>FORGED</span></div>',
-        '<div id="mf-gate-sub">Taiwan Official</div>',
-        '<div id="mf-gate-label">Access Code</div>',
-        '<input id="mf-gate-input" type="password" placeholder="• • • • • •" maxlength="12" autocomplete="off">',
-        '<button id="mf-gate-btn">Enter</button>',
-        '<div id="mf-gate-err"></div>',
-      '</div>'
-    ].join('');
-    document.body.appendChild(box);
-
-    function tryLogin() {
-      var val = document.getElementById('mf-gate-input').value.trim();
-      if (val === PASS) {
-        try { localStorage.setItem(KEY, Date.now().toString()); } catch(e) {}
-        document.getElementById('mf-gate').remove();
-      } else {
-        var err = document.getElementById('mf-gate-err');
-        err.textContent = '密碼錯誤，請再試一次';
-        document.getElementById('mf-gate-input').value = '';
-        document.getElementById('mf-gate-input').focus();
-        setTimeout(function(){ err.textContent = ''; }, 2500);
-      }
-    }
-
-    document.getElementById('mf-gate-btn').addEventListener('click', tryLogin);
-    document.getElementById('mf-gate-input').addEventListener('keydown', function(e){
-      if (e.key === 'Enter') tryLogin();
-    });
-    setTimeout(function(){ document.getElementById('mf-gate-input').focus(); }, 100);
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', showGate);
-  } else {
-    showGate();
-  }
-})();
 /* ================================================================
    shared.js — Markforged GCR | www.markforged.tw
    - Nav/footer injection
@@ -103,7 +29,7 @@
         <a href="fx10.html">FX10</a>
         <a href="fx20.html">FX20</a>
         <a href="px100.html">PX100</a>
-        <a href="x7fe.html" data-zh="X7 Field Edition" data-en="X7 Field Edition">X7 Field Edition</a>
+        <a href="x7fe.html" target="_blank" rel="noopener" data-zh="X7 Field Edition" data-en="X7 Field Edition">X7 Field Edition</a>
       </div>
     </li>
     <li class="has-dropdown">
@@ -154,7 +80,7 @@
         <li><a href="fx10.html">FX10</a></li>
         <li><a href="fx20.html">FX20</a></li>
         <li><a href="px100.html">PX100</a></li>
-        <li><a href="x7fe.html" data-zh="X7 Field Edition" data-en="X7 Field Edition">X7 Field Edition</a></li>
+        <li><a href="x7fe.html" target="_blank" rel="noopener" data-zh="X7 Field Edition" data-en="X7 Field Edition">X7 Field Edition</a></li>
       </ul>
     </div>
     <div class="footer-col">
