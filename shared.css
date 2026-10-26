@@ -1,7 +1,8 @@
 /* ================================================================
    shared.css — Markforged GCR | www.markforged.tw
    Brand colors per Markforged VIS Guidelines v2.0:
-     Manufacturing Yellow: #FFC500  (primary accent, on dark bg only)
+     Manufacturing Yellow: #FFFF00  (PMS 803; VIS v2.0 p.19 — 2026-10-26 由 #FFC500 改回)
+                           黃字不放白底：白底強調一律黑字＋黃色螢光底
      Black Onyx:           #000000
      White:                #FFFFFF
      Metal 4 (dark gray):  #666666
@@ -15,7 +16,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --yellow:  #FFC500;  /* Manufacturing Yellow — screen-optimised (VIS print: #FFFF00) */
+  --yellow:  #FFFF00;  /* Manufacturing Yellow — VIS v2.0（#FFC500 不是品牌色） */
   --black:   #000000;  /* Black Onyx */
   --white:   #FFFFFF;
   --gray1:   #666666;  /* Metal 4 */
@@ -457,7 +458,7 @@ section { padding: var(--sec-py) var(--sec-px); }
   padding: 32px 24px; border-top: 3px solid var(--yellow);
   transition: box-shadow .2s;
 }
-.case-card:hover { box-shadow: 0 8px 32px rgba(255,197,0,.12); }
+.case-card:hover { box-shadow: 0 8px 32px rgba(255,255,0,.12); }
 .case-card .quote { font-size: 40px; color: var(--yellow); line-height: 1; margin-bottom: 12px; }
 .case-card blockquote { font-size: 15px; color: #ccc; line-height: 1.7; margin-bottom: 20px; font-style: italic; }
 .case-card .author { font-size: 13px; font-weight: 700; color: #fff; }
@@ -489,7 +490,7 @@ section { padding: var(--sec-py) var(--sec-px); }
 }
 .form-group input:focus,
 .form-group select:focus,
-.form-group textarea:focus { border-color: var(--yellow); box-shadow: 0 0 0 2px rgba(255,197,0,.15); }
+.form-group textarea:focus { border-color: var(--yellow); box-shadow: 0 0 0 2px rgba(255,255,0,.15); }
 .form-group textarea { min-height: 120px; resize: vertical; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; gap: 0; } }
@@ -587,3 +588,33 @@ footer { background: #000; color: #aaa; padding: 60px 32px 32px; }
 }
 .dl-btn:hover { background: #1a1a1a; border-color: var(--yellow); color: var(--yellow); }
 .dl-wrap { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+
+/* ===== 2026-10-26 品牌一致化 ===== */
+/* 導覽列：黑底＋白色官方 logo（與 news.markforged.tw、頁尾一致） */
+#main-nav { background:#000; border-bottom:1px solid #1f1f1f; }
+.nav-logo svg { height:30px; width:auto; }
+.nav-links > li > a { color:#fff; }
+.nav-links > li > a:hover, .nav-links > li > a.active { color:var(--yellow); }
+.nav-cta { background:var(--yellow); color:#000; }
+.nav-cta:hover { background:#fff; color:#000; }
+.lang-toggle { border-color:#fff; }
+.lang-toggle span, .lang-sep { color:#fff; }
+.lang-toggle span.active { background:var(--yellow); color:#000; }
+.lang-toggle span:hover:not(.active) { background:rgba(255,255,255,.12); }
+/* 手機選單按鈕：三條線直向排列，展開時成 X */
+.hamburger { flex-direction:column; }
+.hamburger span { background:#fff; }
+.hamburger.open span:nth-child(1) { transform:translateY(12px) rotate(45deg); }
+.hamburger.open span:nth-child(3) { transform:translateY(-12px) rotate(-45deg); }
+@media (max-width:960px) {
+  .nav-links { background:#000; }
+  .has-dropdown.open .dropdown { background:#111; border-top-color:var(--yellow); }
+  .has-dropdown.open .dropdown a { color:#fff; }
+}
+@media (max-width:480px) { .nav-logo svg { width:128px !important; height:auto !important; } }
+/* 白底強調字：黑字＋黃色螢光底（VIS：黃字不放白底）；黑底維持黃字 */
+.section-title .hl { color:#000; background:linear-gradient(transparent 58%, var(--yellow) 58%); padding:0 3px; }
+.dark-section .section-title .hl, .dark-bg .section-title .hl { color:var(--yellow) !important; background:none; padding:0; }
+.product-card a.learn-more { color:#000; border-bottom:2px solid var(--yellow); padding-bottom:2px; }
+.feature-icon svg, .feature-icon svg * { stroke:#000; }
+.case-industry { color:#000 !important; }
