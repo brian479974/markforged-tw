@@ -27,9 +27,9 @@
       <a href="products.html" data-zh="產品" data-en="Products">產品</a>
       <div class="dropdown">
         <a href="fx10.html">FX10</a>
+        <a href="fx10-metal.html" data-zh="FX10 金屬方案（Sinter-2 套組）" data-en="FX10 Metal Solution (Sinter-2 Bundle)">FX10 金屬方案（Sinter-2 套組）</a>
         <a href="fx20.html">FX20</a>
-        <a href="px100.html">PX100</a>
-        <a href="x7fe.html" target="_blank" rel="noopener" data-zh="X7 Field Edition" data-en="X7 Field Edition">X7 Field Edition</a>
+        <a href="x7fe.html" data-zh="X7 Field Edition" data-en="X7 Field Edition">X7 Field Edition</a>
       </div>
     </li>
     <li class="has-dropdown">
@@ -52,6 +52,7 @@
     </li>
     <li><a href="materials.html" data-zh="材料" data-en="Materials">材料</a></li>
     <li><a href="cases.html" data-zh="案例" data-en="Cases">案例</a></li>
+    <li><a href="https://news.markforged.tw/" data-zh="新聞" data-en="News">新聞</a></li>
     <li><a href="about.html" data-zh="關於" data-en="About">關於</a></li>
     <li><a href="contact.html" data-zh="聯絡" data-en="Contact">聯絡</a></li>
   </ul>
@@ -78,9 +79,9 @@
       <ul>
         <li><a href="products.html" data-zh="產品總覽" data-en="All Products">產品總覽</a></li>
         <li><a href="fx10.html">FX10</a></li>
+        <li><a href="fx10-metal.html" data-zh="FX10 金屬方案" data-en="FX10 Metal Solution">FX10 金屬方案</a></li>
         <li><a href="fx20.html">FX20</a></li>
-        <li><a href="px100.html">PX100</a></li>
-        <li><a href="x7fe.html" target="_blank" rel="noopener" data-zh="X7 Field Edition" data-en="X7 Field Edition">X7 Field Edition</a></li>
+        <li><a href="x7fe.html" data-zh="X7 Field Edition" data-en="X7 Field Edition">X7 Field Edition</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -95,6 +96,7 @@
         <li><a href="electronics.html" data-zh="電子製造" data-en="Electronics">電子製造</a></li>
         <li><a href="materials.html" data-zh="材料總覽" data-en="Materials">材料總覽</a></li>
         <li><a href="cases.html" data-zh="客戶案例" data-en="Case Studies">客戶案例</a></li>
+        <li><a href="https://news.markforged.tw/" data-zh="新聞與媒體中心" data-en="Newsroom">新聞與媒體中心</a></li>
         <li><a href="about.html" data-zh="關於我們" data-en="About Us">關於我們</a></li>
         <li><a href="contact.html" data-zh="聯絡我們" data-en="Contact">聯絡我們</a></li>
       </ul>

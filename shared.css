@@ -20,7 +20,7 @@
   --black:   #000000;  /* Black Onyx */
   --white:   #FFFFFF;
   --gray1:   #666666;  /* Metal 4 */
-  --gray2:   #999999;  /* Metal 3 */
+  --gray2:   #666666;  /* Metal 3 */
   --gray3:   #CCCCCC;  /* Metal 2 */
   --gray4:   #F4F4F4;  /* Metal 1 */
   --font: 'Helvetica Neue', Helvetica, Arial, 'PingFang TC', 'Noto Sans TC', sans-serif;
@@ -618,3 +618,88 @@ footer { background: #000; color: #aaa; padding: 60px 32px 32px; }
 .product-card a.learn-more { color:#000; border-bottom:2px solid var(--yellow); padding-bottom:2px; }
 .feature-icon svg, .feature-icon svg * { stroke:#000; }
 .case-industry { color:#000 !important; }
+
+/* ===== 2026-10-26 第二輪 ===== */
+/* 內文灰字加深（#999 在白底對比僅 2.8）；黑底區塊維持淺灰 */
+.page-hero .breadcrumb { color:#999; }
+.footer-brand p, .footer-col a { color:#999; }
+.footer-bottom p, .footer-bottom a { color:#777; }
+/* 首頁主視覺：FX10 原廠照，機台本身有打光，不再壓暗 */
+.hero-bg.hero-fx10 { opacity:1; object-fit:contain; object-position:center; padding:72px 0 0; }
+@media (max-width:960px) { .hero-bg.hero-fx10 { opacity:.35; object-fit:cover; padding:0; } }
+/* 產品頁手機版：兩欄改單欄，內聯 order 失效 */
+@media (max-width:860px) {
+  .prod-row { grid-template-columns:1fr !important; gap:28px !important; }
+  .prod-row > div { order:0 !important; }
+}
+/* FX10 金屬方案頁 */
+.mx-quote { font-size:clamp(20px,2.6vw,30px); font-weight:800; line-height:1.5; color:#fff; max-width:900px; }
+.mx-quote small { display:block; margin-top:14px; font-size:13px; font-weight:400; color:#aaa; }
+.mx-four { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+@media (max-width:1024px) { .mx-four { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:560px) { .mx-four { grid-template-columns:1fr; } }
+.mx-unit { background:#fff; border:1px solid #e6e6e6; border-top:4px solid #000; }
+.mx-unit .ph { aspect-ratio:4/3; background:#0a0a0a; overflow:hidden; }
+.mx-unit .ph img { width:100%; height:100%; object-fit:cover; }
+.mx-unit .bd { padding:18px; }
+.mx-unit .no { font-size:12px; font-weight:900; letter-spacing:2px; }
+.mx-unit h3 { font-size:22px; font-weight:900; margin:4px 0 6px; color:#000; }
+.mx-unit .role { font-size:14px; font-weight:700; color:#000; margin-bottom:10px; }
+.mx-unit ul { list-style:none; font-size:13px; color:#444; line-height:1.7; }
+.mx-flow { display:grid; grid-template-columns:repeat(4,1fr); gap:0; counter-reset:step; }
+@media (max-width:860px) { .mx-flow { grid-template-columns:1fr 1fr; } }
+@media (max-width:480px) { .mx-flow { grid-template-columns:1fr; } }
+.mx-step { border-left:4px solid var(--yellow); padding:6px 22px 22px; }
+.mx-step b { display:block; color:var(--yellow); font-size:13px; letter-spacing:2px; margin-bottom:6px; }
+.mx-step h4 { color:#fff; font-size:19px; margin-bottom:8px; }
+.mx-step p { color:#aaa; font-size:14px; line-height:1.7; }
+.mx-why { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; }
+@media (max-width:760px) { .mx-why { grid-template-columns:1fr; } }
+.mx-why div { border-top:3px solid #000; padding-top:16px; }
+.mx-why h3 { font-size:19px; font-weight:900; color:#000; margin-bottom:8px; }
+.mx-why p { font-size:15px; color:#444; line-height:1.8; }
+.mx-mode { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+@media (max-width:760px) { .mx-mode { grid-template-columns:1fr; } }
+.mx-mode > div { background:#fff; padding:26px; border:1px solid #e6e6e6; }
+.mx-mode h3 { font-size:20px; font-weight:900; color:#000; margin-bottom:12px; }
+.mx-mode li { font-size:14px; color:#333; line-height:1.9; list-style:none; }
+.mx-mode li b { color:#000; }
+.mx-spec { width:100%; border-collapse:collapse; font-size:14px; }
+.mx-spec th { text-align:left; background:#000; color:#fff; padding:10px 12px; font-size:13px; }
+.mx-spec td { padding:10px 12px; border-bottom:1px solid #e6e6e6; vertical-align:top; color:#222; }
+.mx-spec td:first-child { width:28%; color:#555; font-weight:700; }
+.mx-video { width:100%; max-width:960px; display:block; margin:0 auto; background:#000; }
+.home-metal { display:grid; grid-template-columns:1.1fr .9fr; gap:48px; align-items:center; }
+@media (max-width:900px) { .home-metal { grid-template-columns:1fr; } }
+.home-metal img { width:100%; border:1px solid #222; }
+.home-metal ul { list-style:none; margin:20px 0 28px; }
+.home-metal li { color:#ccc; font-size:15px; line-height:1.7; padding:8px 0 8px 18px; border-bottom:1px solid #222; position:relative; }
+.home-metal li::before { content:''; position:absolute; left:0; top:17px; width:8px; height:8px; background:var(--yellow); }
+.home-metal li b { color:#fff; }
+
+/* ===== 2026-10-26 官方案例卡（案例頁／產業頁／首頁共用） ===== */
+.oc-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+@media (max-width:1024px) { .oc-grid { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:640px) { .oc-grid { grid-template-columns:1fr; } }
+.oc-card { background:#fff; border:1px solid #e6e6e6; display:flex; flex-direction:column; }
+.oc-img { display:block; aspect-ratio:3/2; overflow:hidden; background:#111; }
+.oc-img img { width:100%; height:100%; object-fit:cover; transition:transform .4s; }
+.oc-card:hover .oc-img img { transform:scale(1.03); }
+.oc-body { padding:20px 20px 18px; display:flex; flex-direction:column; flex:1; }
+.oc-meta { font-size:11px; letter-spacing:1px; color:#555; font-weight:700; text-transform:uppercase; margin-bottom:8px; }
+.oc-body h3 { font-size:17px; line-height:1.4; color:#000; font-weight:800; margin-bottom:12px; }
+.oc-results { list-style:none; margin:0 0 14px; padding:0; flex:1; }
+.oc-results li { font-size:14px; line-height:1.6; color:#333; padding:6px 0 6px 14px; border-top:1px solid #eee; position:relative; }
+.oc-results li::before { content:''; position:absolute; left:0; top:13px; width:6px; height:6px; background:var(--yellow); outline:1px solid #000; }
+.oc-tags { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px; }
+.oc-tags span { font-size:11px; border:1px solid #ccc; padding:2px 8px; color:#333; }
+.oc-links { display:flex; flex-wrap:wrap; gap:16px; }
+.oc-links a { font-size:13px; font-weight:700; color:#000; border-bottom:2px solid var(--yellow); padding-bottom:2px; }
+.oc-links a.oc-news { background:var(--yellow); border:none; padding:3px 8px; }
+.oc-chipnav { display:flex; flex-wrap:wrap; gap:8px; }
+.oc-chipnav a { font-size:13px; font-weight:700; border:1.5px solid #000; padding:7px 12px; color:#000; background:#fff; }
+.oc-chipnav a:hover { background:var(--yellow); }
+.oc-chipnav a b { font-weight:900; margin-left:6px; }
+.oc-ind-head { display:flex; align-items:baseline; gap:18px; margin-bottom:6px; }
+.oc-ind-head .num { font-size:44px; font-weight:900; color:#000; line-height:1; }
+.oc-note { font-size:13px; color:#555; line-height:1.7; max-width:900px; }
