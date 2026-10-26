@@ -154,6 +154,17 @@
     });
 
     document.documentElement.lang = lang === 'zh' ? 'zh-TW' : 'en';
+
+    // 媒體中心（news.markforged.tw）的連結跟著語言走：英文時首頁連 index-en.html、文章帶 ?lang=en
+    // （兩個網站各記各的語言會對不上，所以語言放在連結上帶過去；那邊的 globalbar.js 會轉到英文版）
+    document.querySelectorAll('a[href^="https://news.markforged.tw"]').forEach(function (a) {
+      var u;
+      try { u = new URL(a.getAttribute('href')); } catch (e) { return; }
+      u.searchParams.delete('lang');
+      if (/^\/(index(-en)?\.html)?$/.test(u.pathname)) u.pathname = lang === 'en' ? '/index-en.html' : '/';
+      else if (lang === 'en') u.searchParams.set('lang', 'en');
+      a.setAttribute('href', u.toString());
+    });
   }
 
   // ── Hamburger ─────────────────────────────────────────────────────
