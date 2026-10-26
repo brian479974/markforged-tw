@@ -12,6 +12,8 @@
   var LANG_KEY = 'mf_lang';
   var currentLang = 'zh';
   try { currentLang = localStorage.getItem(LANG_KEY) || 'zh'; } catch (e) {}
+  // 從媒體中心英文版點過來的連結帶 ?lang=en（news.markforged.tw 的 globalbar.js）
+  try { var qLang = new URLSearchParams(location.search).get('lang'); if (qLang === 'en' || qLang === 'zh') currentLang = qLang; } catch (e) {}
 
   // ── Nav HTML ────────────────────────────────────────────────────
   var NAV_HTML = `
