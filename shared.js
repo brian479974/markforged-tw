@@ -31,6 +31,7 @@
         <a href="fx10.html">FX10</a>
         <a href="fx10-metal.html" data-zh="FX10 金屬方案（Sinter-2 套組）" data-en="FX10 Metal Solution (Sinter-2 Bundle)">FX10 金屬方案（Sinter-2 套組）</a>
         <a href="fx20.html">FX20</a>
+        <a href="x7.html">X7</a>
         <a href="x7fe.html" data-zh="X7 Field Edition" data-en="X7 Field Edition">X7 Field Edition</a>
       </div>
     </li>
@@ -83,6 +84,7 @@
         <li><a href="fx10.html">FX10</a></li>
         <li><a href="fx10-metal.html" data-zh="FX10 金屬方案" data-en="FX10 Metal Solution">FX10 金屬方案</a></li>
         <li><a href="fx20.html">FX20</a></li>
+        <li><a href="x7.html">X7</a></li>
         <li><a href="x7fe.html" data-zh="X7 Field Edition" data-en="X7 Field Edition">X7 Field Edition</a></li>
       </ul>
     </div>
