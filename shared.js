@@ -144,6 +144,12 @@
       else { el.innerHTML = val; }
     });
 
+    // 連結依語言換網址（2026-10-27：原廠有官方繁中譯文的案例，中文模式連繁中頁、英文模式連英文頁）
+    document.querySelectorAll('[data-href-zh]').forEach(function (a) {
+      var v = lang === 'zh' ? a.getAttribute('data-href-zh') : a.getAttribute('data-href-en');
+      if (v) a.setAttribute('href', v);
+    });
+
     document.querySelectorAll('[data-ph-zh]').forEach(function (el) {
       el.placeholder = lang === 'zh' ? el.getAttribute('data-ph-zh') : el.getAttribute('data-ph-en');
     });
