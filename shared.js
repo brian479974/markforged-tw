@@ -98,6 +98,7 @@
         <li><a href="electronics.html" data-zh="電子製造" data-en="Electronics">電子製造</a></li>
         <li><a href="materials.html" data-zh="材料總覽" data-en="Materials">材料總覽</a></li>
         <li><a href="cases.html" data-zh="客戶案例" data-en="Case Studies">客戶案例</a></li>
+        <li><a href="videos.html" data-zh="影片" data-en="Videos">影片</a></li>
         <li><a href="https://news.markforged.tw/" data-zh="新聞與媒體中心" data-en="Newsroom">新聞與媒體中心</a></li>
         <li><a href="about.html" data-zh="關於我們" data-en="About Us">關於我們</a></li>
         <li><a href="contact.html" data-zh="聯絡我們" data-en="Contact">聯絡我們</a></li>

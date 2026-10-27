@@ -703,3 +703,80 @@ footer { background: #000; color: #aaa; padding: 60px 32px 32px; }
 .oc-ind-head { display:flex; align-items:baseline; gap:18px; margin-bottom:6px; }
 .oc-ind-head .num { font-size:44px; font-weight:900; color:#000; line-height:1; }
 .oc-note { font-size:13px; color:#555; line-height:1.7; max-width:900px; }
+
+
+
+/* R6:BEGIN 2026-10-27 材料頁＋影片元件（r6_materials.py / r6_videos.py 產生） */
+.mt-img { margin:-32px -24px 20px; background:#fff; border-bottom:1px solid #eee; }
+.mt-img img { width:100%; height:auto; display:block; aspect-ratio:4/3; object-fit:contain; }
+.mt-noimg { aspect-ratio:4/3; background:#111; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; }
+.mt-noimg span { font-size:44px; font-weight:900; color:var(--yellow); letter-spacing:-1px; }
+.mt-noimg small { font-size:13px; color:#ccc; }
+.mt-meta { display:flex; flex-wrap:wrap; gap:10px 18px; margin-top:16px; padding-top:14px; border-top:1px solid #e4e4e4; align-items:flex-start; }
+.mt-meta.dark { border-top-color:#333; }
+.mt-ds { font-size:13px; font-weight:700; color:#000; border-bottom:2px solid var(--yellow); padding-bottom:1px; }
+.dark-section .mt-ds { color:#fff; }
+.mt-cases { width:100%; font-size:13px; }
+.mt-cases summary { cursor:pointer; font-weight:700; color:#000; list-style:none; }
+.mt-cases summary::before { content:'＋ '; }
+.mt-cases[open] summary::before { content:'－ '; }
+.mt-cases ul { list-style:none; margin:8px 0 0; padding:0; }
+.mt-cases li { padding:5px 0; border-top:1px solid #eee; line-height:1.5; }
+.mt-cases li a { color:#333; }
+.mt-cases li a:hover { color:#000; text-decoration:underline; }
+.mt-cases li.note { color:#777; font-size:12px; }
+.mt-cases li.more a { font-weight:700; color:#000; }
+.mt-cases.dark summary { color:#fff; }
+.mt-cases.dark li { border-top-color:#333; }
+.mt-cases.dark li a, .mt-cases.dark li.more a { color:#ddd; }
+.mt-cases.dark li.note { color:#999; }
+.fb-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+@media (max-width:900px) { .fb-grid { grid-template-columns:repeat(2,1fr); } }
+.fb-tile { margin:0; background:#fff; }
+.fb-tile img { width:100%; height:auto; display:block; }
+.fb-tile figcaption { background:#111; color:#fff; font-size:13px; font-weight:700; padding:10px 12px; }
+.fb-cases { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:12px 28px; margin-top:20px; }
+.nd-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
+.nd-card { border:1.5px solid #000; padding:18px 18px 16px; background:#fff; }
+.nd-q { font-size:13px; font-weight:700; color:#555; margin-bottom:6px; }
+.nd-a { font-size:17px; font-weight:900; color:#000; line-height:1.35; margin-bottom:8px; }
+.nd-w { font-size:13px; color:#555; line-height:1.6; }
+.ps-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+.ps-grid.ps-5 { grid-template-columns:repeat(5,1fr); }
+@media (max-width:1024px) { .ps-grid, .ps-grid.ps-5 { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:560px) { .ps-grid, .ps-grid.ps-5 { grid-template-columns:1fr; } }
+.ps-step { margin:0; background:#fff; border:1px solid #e6e6e6; }
+.ps-step img { width:100%; height:auto; display:block; aspect-ratio:3/2; object-fit:cover; background:#000; }
+.ps-step figcaption { padding:12px 14px 14px; }
+.ps-step b { display:block; font-size:12px; font-weight:900; letter-spacing:1px; color:#000; background:var(--yellow); width:max-content; padding:1px 6px; margin-bottom:6px; }
+.ps-t { display:block; font-size:15px; font-weight:800; color:#000; margin-bottom:4px; }
+.ps-d { display:block; font-size:13px; color:#555; line-height:1.55; }
+.vd-title { font-size:20px; font-weight:900; color:#000; }
+.dark-section .vd-title { color:#fff; }
+.vd-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px; }
+.mt-24 { margin-top:24px; }
+.vd { margin:0; background:#000; }
+.vd video { width:100%; display:block; aspect-ratio:16/9; background:#000; }
+.vd.vd-v video { aspect-ratio:9/16; max-height:640px; }
+.vd figcaption { background:#111; color:#fff; font-size:13px; font-weight:700; padding:10px 12px; line-height:1.5; }
+.ds-table th { text-align:left; font-size:12px; color:#555; padding:10px 0; border-bottom:2px solid #000; }
+.ds-table td:first-child { color:#000; width:auto; }
+.ds-table td a { font-weight:700; color:#000; border-bottom:2px solid var(--yellow); }
+.faq-list { max-width:900px; }
+.faq { border-top:1px solid #ddd; padding:16px 0; }
+.faq summary { cursor:pointer; font-size:16px; font-weight:800; color:#000; }
+.faq p { font-size:14px; color:#444; line-height:1.8; margin-top:10px; }
+/* R6:END */
+
+/* R6V:BEGIN 影片頁卡片 */
+.vc-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:24px; align-items:start; }
+.vc { background:#fff; border:1px solid #e6e6e6; display:flex; flex-direction:column; }
+.dark-section .vc, section[style*="#000"] .vc { border-color:#222; }
+.vc.vc-v .vd { background:#000; display:flex; justify-content:center; }
+.vc.vc-v .vd video { width:auto; height:480px; max-width:100%; aspect-ratio:9/16; }
+.vc-body { padding:16px 18px 18px; }
+.vc-dur { font-size:12px; font-weight:800; letter-spacing:1px; color:#000; background:var(--yellow); display:inline-block; padding:1px 7px; margin-bottom:8px; }
+.vc-body h3 { font-size:17px; font-weight:800; color:#000; line-height:1.4; margin-bottom:8px; }
+.vc-body p { font-size:14px; color:#444; line-height:1.7; }
+.vc-link { display:inline-block; margin-top:12px; font-size:13px; font-weight:700; color:#000; border-bottom:2px solid var(--yellow); }
+/* R6V:END */
