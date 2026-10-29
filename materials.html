@@ -8,6 +8,39 @@
 <link rel="canonical" href="https://www.markforged.tw/materials.html">
 <link rel="icon" type="image/png" href="images/favicon-32.png">
 <link rel="stylesheet" href="shared.css?v=20260328b">
+<style>
+/* R9 新材料 Onyx GF 專區（只用在 materials.html） */
+.ogf-top { display:grid; grid-template-columns:1fr 1.15fr; gap:48px; align-items:center; }
+.ogf-top .section-title { margin-bottom:6px; }
+.ogf sup { font-size:.42em; vertical-align:super; line-height:0; margin-left:2px; font-weight:700; }
+.ogf-tag { font-size:19px; font-weight:800; color:#000; margin-bottom:18px; }
+.ogf-p { font-size:15px; color:var(--gray2); line-height:1.8; margin-bottom:12px; }
+.ogf-colors { display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; }
+.ogf-colors span { font-size:13px; font-weight:700; color:#000; background:#fff; border:1.5px solid #000; padding:4px 14px; }
+.ogf-pic img { width:100%; height:auto; display:block; }
+.ogf-kv { display:grid; grid-template-columns:repeat(4,1fr); margin-top:44px; background:#000; }
+.ogf-kv div { padding:22px 22px 20px; border-left:1px solid #333; }
+.ogf-kv div:first-child { border-left:0; }
+.ogf-kv b { display:block; font-size:clamp(26px,3vw,38px); font-weight:900; color:var(--yellow); line-height:1.1; }
+.ogf-kv span { display:block; font-size:13px; color:#ccc; margin-top:8px; }
+.ogf-note { font-size:12px; color:var(--gray2); line-height:1.7; margin-top:12px; }
+.ogf-mid { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:32px; }
+.ogf-box { background:#fff; border:1.5px solid #000; padding:22px 22px 18px; }
+.ogf-box h3 { font-size:16px; font-weight:900; color:#000; margin-bottom:10px; }
+.ogf-box ul { list-style:none; margin:0; padding:0; }
+.ogf-box li { font-size:14px; line-height:1.6; color:#333; padding:6px 0 6px 14px; border-top:1px solid #eee; position:relative; }
+.ogf-box li::before { content:''; position:absolute; left:0; top:13px; width:6px; height:6px; background:var(--yellow); outline:1px solid #000; }
+.ogf-works { font-size:22px; font-weight:900; color:#000; margin-bottom:10px; }
+.ogf-warn { font-size:14px; color:#333; line-height:1.7; margin-bottom:12px; }
+@media (max-width:900px) {
+  .ogf-top { grid-template-columns:1fr; gap:28px; }
+  .ogf-pic { order:-1; }
+  .ogf-kv { grid-template-columns:repeat(2,1fr); }
+  .ogf-kv div:nth-child(3) { border-left:0; }
+  .ogf-kv div:nth-child(n+3) { border-top:1px solid #333; }
+  .ogf-mid { grid-template-columns:1fr; }
+}
+</style>
 </head>
 <body>
 <div id="nav-slot"></div>
@@ -100,11 +133,57 @@
 
 
 
-<!-- R6:BEGIN vid-onyx -->
-<section style="background:var(--gray4);">
+<!-- R9:BEGIN onyx-gf（2026-10-29 新材料專區；文字取自 markforged.com/tw 與英文官網原文，數值取自原廠規格書 V01） -->
+<section id="onyx-gf" class="ogf" style="background:var(--gray4);">
   <div class="section-inner">
-    <p class="section-label" data-zh="影片" data-en="Video">影片</p>
-    <h3 class="vd-title" data-zh="Onyx GF：顏色與強度不用二選一" data-en="Onyx GF: color without giving up strength">Onyx GF：顏色與強度不用二選一</h3>
+    <p class="section-label" data-zh="新材料" data-en="New Material">新材料</p>
+    <div class="ogf-top">
+      <div class="ogf-txt reveal">
+        <h2 class="section-title">Onyx GF<sup>™</sup></h2>
+        <p class="ogf-tag" data-zh="適用於工廠生產線的彩色複合材料" data-en="Color composites that work for the factory floor">適用於工廠生產線的彩色複合材料</p>
+        <p class="ogf-p" data-zh="Onyx GF™ 是一種短玻璃纖維填充尼龍線材，專為工業工具及最終產品零件設計，不僅具備 Onyx 系列優異的表面處理、尺寸精準度與列印可靠性，更增添了功能性的色彩與非導電特性。" data-en="Onyx GF™ is a chopped-glass-fiber-filled nylon filament built for industrial tooling and end-use parts, delivering the surface finish, dimensional accuracy, and print reliability of Onyx with added functional color and non-conductive properties.">Onyx GF™ 是一種短玻璃纖維填充尼龍線材，專為工業工具及最終產品零件設計，不僅具備 Onyx 系列優異的表面處理、尺寸精準度與列印可靠性，更增添了功能性的色彩與非導電特性。</p>
+        <p class="ogf-p" data-zh="本產品提供六種色彩選擇，無需額外流程即可為生產現場帶來視覺上的區隔——在需要採用顏色編碼、可識別工具的營運規定中，支援符合安全規範並實現防錯工作流程。" data-en="Available in six colors, it brings visual differentiation to the factory floor without added process — supporting safety compliance and error-proofing workflows where color-coded, identifiable tooling is an operational requirement.">本產品提供六種色彩選擇，無需額外流程即可為生產現場帶來視覺上的區隔——在需要採用顏色編碼、可識別工具的營運規定中，支援符合安全規範並實現防錯工作流程。</p>
+        <p class="ogf-p" data-zh="Onyx GF 適用於連續纖維增強的規格，可滿足更高負載的應用需求，專為汽車、航太、國防及其他對材料性能與視覺效果有著嚴格要求的製造環境所設計。" data-en="Compatible with Continuous Fiber Reinforcement, Onyx GF scales to higher-load applications, and is designed for automotive, aerospace, defense, and other demanding manufacturing environments where both material performance and visual organization are non-negotiable.">Onyx GF 適用於連續纖維增強的規格，可滿足更高負載的應用需求，專為汽車、航太、國防及其他對材料性能與視覺效果有著嚴格要求的製造環境所設計。</p>
+        <div class="ogf-colors" aria-label="six colors"><span data-zh="紅" data-en="Red">紅</span><span data-zh="黃" data-en="Yellow">黃</span><span data-zh="綠" data-en="Green">綠</span><span data-zh="藍" data-en="Blue">藍</span><span data-zh="灰" data-en="Gray">灰</span><span data-zh="白" data-en="White">白</span></div>
+      </div>
+      <div class="ogf-pic reveal"><img src="images/materials/onyx-gf-spools.jpg" alt="Markforged Onyx GF six-color filament spools" loading="lazy" width="1400" height="501"></div>
+    </div>
+    <div class="ogf-kv reveal"><div><b>57.9 MPa</b><span data-zh="抗拉屈服強度" data-en="Tensile strength at yield">抗拉屈服強度</span></div><div><b>3.1 GPa</b><span data-zh="拉伸模數" data-en="Tensile modulus">拉伸模數</span></div><div><b>88.2 MPa</b><span data-zh="彎曲強度" data-en="Flexural strength">彎曲強度</span></div><div><b>138°C</b><span data-zh="熱變形溫度（1.8 MPa）" data-en="Heat deflection temp. (1.8 MPa)">熱變形溫度（1.8 MPa）</span></div></div>
+    <p class="ogf-note" data-zh="數值出自 Markforged Onyx GF 原廠材料規格書 V01：FX10 列印、層厚 125 µm、XY 方向、依 ASTM D618 調濕後測試。熱變形溫度在 1.8 MPa 負載下量測，與 Onyx 系列的 0.45 MPa 條件不同，不能直接比較。" data-en="Values from the Markforged Onyx GF material datasheet V01: printed on FX10, 125 µm layers, XY orientation, conditioned per ASTM D618. Heat deflection is measured at 1.8 MPa, a different load from the 0.45 MPa used for the Onyx family, so the two are not directly comparable.">數值出自 Markforged Onyx GF 原廠材料規格書 V01：FX10 列印、層厚 125 µm、XY 方向、依 ASTM D618 調濕後測試。熱變形溫度在 1.8 MPa 負載下量測，與 Onyx 系列的 0.45 MPa 條件不同，不能直接比較。</p>
+    <div class="ogf-mid">
+      <div class="ogf-box reveal"><h3 data-zh="應用" data-en="Applications">應用</h3><ul><li data-zh="色彩編碼的夾具與工件" data-en="Color-Coded Jigs &amp; Fixtures">色彩編碼的夾具與工件</li><li data-zh="高能見度安全工件" data-en="High-Visibility Safety Tooling">高能見度安全工件</li><li data-zh="感應器外殼" data-en="Sensor Housings">感應器外殼</li><li data-zh="天線外殼" data-en="Antenna Enclosures">天線外殼</li></ul></div>
+      <div class="ogf-box reveal"><h3 data-zh="適用機型" data-en="Works With">適用機型</h3><p class="ogf-works">FX10<sup>™</sup> · FX20<sup>™</sup></p><p class="ogf-warn" data-zh="*列印 Onyx GF 時，必須使用硬化塑膠噴嘴。" data-en="*Hardened Plastic Nozzle required to print Onyx GF.">*列印 Onyx GF 時，必須使用硬化塑膠噴嘴。</p><p><a class="mt-ds" href="docs/Markforged-Onyx-GF-Material-Datasheet.pdf" target="_blank" rel="noopener" data-zh="原廠規格書 ↓" data-en="Official datasheet ↓">原廠規格書 ↓</a></p></div>
+    </div>
+    <h3 class="vd-title" style="margin-top:56px;" data-zh="官方案例" data-en="Official cases">官方案例</h3>
+    <div class="oc-grid mt-24"><article class="oc-card reveal">
+  <a class="oc-img" href="https://markforged.com/resources/case-studies/the-7-000-per-hour-catch-zero-fod-foreign-object-debris-prevention-with-vestas" target="_blank" rel="noopener"><img src="images/cases/MF-OFF-132.jpg" alt="The $7,000 per Hour Catch: Zero-FOD (Foreign Object Debris) Prevention with Vestas" loading="lazy" width="720" height="480"></a>
+  <div class="oc-body">
+    <p class="oc-meta" data-zh="能源與油氣 · 品質檢測／量測治具" data-en="Energy, Oil &amp; Gas · Quality inspection / metrology fixtures">能源與油氣 · 品質檢測／量測治具</p>
+    <h3 data-zh="Vestas｜Go/No-Go 檢具與校驗治具的 FOD 異物防呆（高辨識度 Onyx GF＋AI 機器視覺）" data-en="The $7,000 per Hour Catch: Zero-FOD (Foreign Object Debris) Prevention with Vestas">Vestas｜Go/No-Go 檢具與校驗治具的 FOD 異物防呆（高辨識度 Onyx GF＋AI 機器視覺）</h3>
+    <ul class="oc-results"><li data-zh="模具停機每小時約損失 7,000 美元產值" data-en="Mold downtime runs approximately $7,000 per hour in lost production">模具停機每小時約損失 7,000 美元產值</li><li data-zh="單次工具遺留事故若需全天修補，單一廠區損失可達 168,000 美元以上" data-en="A single lost-tool incident requiring a full-day repair can cost the facility upwards of $168,000">單次工具遺留事故若需全天修補，單一廠區損失可達 168,000 美元以上</li><li data-zh="零件下機即符合 ISO 安全色標準，免噴漆、免染色（後處理歸零）" data-en="Parts meet ISO safety color standards straight off the printer, with no painting or dyeing required">零件下機即符合 ISO 安全色標準，免噴漆、免染色（後處理歸零）</li></ul>
+    <div class="oc-tags"><span>Onyx GF</span><span>Onyx</span></div>
+    <div class="oc-links"><a href="https://markforged.com/resources/case-studies/the-7-000-per-hour-catch-zero-fod-foreign-object-debris-prevention-with-vestas" target="_blank" rel="noopener" data-zh="官方案例原文 ↗" data-en="Official case study ↗">官方案例原文 ↗</a></div>
+  </div>
+</article><article class="oc-card reveal">
+  <a class="oc-img" href="https://markforged.com/tw/resources/application-spotlights/precision-quality-control-reinventing-the-pull-force-applicator-with-color-coded-carbon-fiber" data-href-zh="https://markforged.com/tw/resources/application-spotlights/precision-quality-control-reinventing-the-pull-force-applicator-with-color-coded-carbon-fiber" data-href-en="https://markforged.com/resources/application-spotlights/precision-quality-control-reinventing-the-pull-force-applicator-with-color-coded-carbon-fiber" target="_blank" rel="noopener"><img src="images/cases/MF-OFF-057.jpg" alt="Precision Quality Control: Reinventing the Pull Force Applicator with Color-Coded Carbon Fiber" loading="lazy" width="720" height="480"></a>
+  <div class="oc-body">
+    <p class="oc-meta" data-zh="食品包裝與消費品 · 品質檢測工具" data-en="Food, Packaging &amp; Consumer · Quality inspection tools">食品包裝與消費品 · 品質檢測工具</p>
+    <h3 data-zh="PakTech｜彩色碳纖維拉力施加器" data-en="Precision Quality Control: Reinventing the Pull Force Applicator with Color-Coded Carbon Fiber">PakTech｜彩色碳纖維拉力施加器</h3>
+    <div style="flex:1"></div>
+    <div class="oc-tags"><span>FX20</span><span>Onyx GF</span><span data-zh="連續碳纖維" data-en="Continuous Carbon Fiber">連續碳纖維</span></div>
+    <div class="oc-links"><a href="https://markforged.com/tw/resources/application-spotlights/precision-quality-control-reinventing-the-pull-force-applicator-with-color-coded-carbon-fiber" data-href-zh="https://markforged.com/tw/resources/application-spotlights/precision-quality-control-reinventing-the-pull-force-applicator-with-color-coded-carbon-fiber" data-href-en="https://markforged.com/resources/application-spotlights/precision-quality-control-reinventing-the-pull-force-applicator-with-color-coded-carbon-fiber" target="_blank" rel="noopener" data-zh="官方中文版原文 ↗" data-en="Official case study ↗">官方中文版原文 ↗</a><a href="videos.html#v-paktech-onyx-gf" data-zh="繁中字幕影片 ▶" data-en="Subtitled video ▶">繁中字幕影片 ▶</a></div>
+  </div>
+</article><article class="oc-card reveal">
+  <a class="oc-img" href="https://www.youtube.com/watch?v=yV77RJ1lAk0" target="_blank" rel="noopener"><img src="images/cases/MF-A2-029.jpg" alt="Subaru × Onyx GF — Color-Coded Carbon Fiber Production-Line Fixtures (Official Video)" loading="lazy" width="720" height="480"></a>
+  <div class="oc-body">
+    <p class="oc-meta" data-zh="汽車與賽車 · 產線色碼治具" data-en="Automotive &amp; Motorsport · Color-coded production-line fixtures">汽車與賽車 · 產線色碼治具</p>
+    <h3 data-zh="Subaru｜產線色碼碳纖維治具" data-en="Subaru × Onyx GF — Color-Coded Carbon Fiber Production-Line Fixtures (Official Video)">Subaru｜產線色碼碳纖維治具</h3>
+    <div style="flex:1"></div>
+    <div class="oc-tags"><span>FX20</span><span>Onyx GF</span><span data-zh="連續碳纖維" data-en="Continuous Carbon Fiber">連續碳纖維</span></div>
+    <div class="oc-links"><a href="https://www.youtube.com/watch?v=yV77RJ1lAk0" target="_blank" rel="noopener" data-zh="觀看官方影片 ↗" data-en="Watch official video ↗">觀看官方影片 ↗</a></div>
+  </div>
+</article></div>
+    <h3 class="vd-title" style="margin-top:56px;" data-zh="影片：顏色與強度不用二選一" data-en="Video: color without giving up strength">影片：顏色與強度不用二選一</h3>
     <div class="vd-grid mt-24">
       <figure class="vd"><video controls preload="none" playsinline poster="images/videos/onyx-gf-short.jpg" src="videos/onyx-gf-short.mp4"></video><figcaption data-zh="Onyx GF 產品短片（28 秒，繁中字幕）" data-en="Onyx GF product short (28 s, Chinese subtitles)">Onyx GF 產品短片（28 秒，繁中字幕）</figcaption></figure>
       <figure class="vd"><video controls preload="none" playsinline poster="images/videos/paktech-onyx-gf.jpg" src="videos/paktech-onyx-gf.mp4"></video><figcaption data-zh="PakTech 用 Onyx GF 做品管治具（73 秒，繁中字幕）" data-en="PakTech: Onyx GF quality fixtures (73 s, Chinese subtitles)">PakTech 用 Onyx GF 做品管治具（73 秒，繁中字幕）</figcaption></figure>
@@ -112,7 +191,7 @@
     </div>
   </div>
 </section>
-<!-- R6:END vid-onyx -->
+<!-- R9:END onyx-gf -->
 
 <!-- 2. 連續纖維 -->
 <section class="dark-section">
