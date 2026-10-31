@@ -8,6 +8,23 @@
 <link rel="canonical" href="https://www.markforged.tw/contact.html">
 <link rel="icon" type="image/png" href="images/favicon-32.png">
 <link rel="stylesheet" href="shared.css?v=20260328b">
+<style>
+/* 詢價表單（2026-10-31，同非紅自我檢核設計：膠囊選項，直接寫進 Markforged VIP 申請表）*/
+.mfq .mfp{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.mfp label{text-transform:none;letter-spacing:0;display:inline-flex;align-items:center;border:1px solid #ccc;border-radius:22px;padding:7px 14px;font-size:13.5px;color:#333;cursor:pointer;background:#fff;font-weight:500;margin:0}
+.mfp label:hover{border-color:#000}
+.mfp input{position:absolute;opacity:0;pointer-events:none}
+.mfp label:has(input:checked){background:#000;color:#FFFF00;border-color:#000;font-weight:700}
+.mfcs{display:flex;gap:8px;align-items:flex-start;font-size:12.5px;color:#555;line-height:1.6;margin:6px 0 14px;font-weight:400}
+.mfcs input{margin-top:4px;width:auto}
+.mferr{display:none;color:#b00020;font-size:13px;font-weight:700;margin-top:10px}
+.mfok{display:none;background:#000;color:#fff;padding:28px 26px;margin-top:8px}
+.mfok-h{color:#FFFF00;font-size:22px;font-weight:900;margin-bottom:8px}
+.mfok p{color:#ddd;font-size:14.5px;line-height:1.8}
+.mfok ul{list-style:none;margin:14px 0 0;padding:0;border-top:1px solid #333}
+.mfok li{display:flex;gap:12px;font-size:13.5px;padding:7px 0;border-bottom:1px solid #222}
+.mfok li b{color:#999;min-width:96px;font-weight:600}
+</style>
 </head>
 <body>
 <div id="nav-slot"></div>
@@ -34,10 +51,12 @@
         <p class="section-label" data-zh="填寫詢價表單" data-en="Submit Inquiry Form">填寫詢價表單</p>
         <h2 class="section-title" style="font-size:clamp(22px,3vw,32px);" data-zh="立即詢價 / <span class='hl'>預約演示</span>" data-en="Request a Quote / <span class='hl'>Book a Demo</span>">立即詢價 / <span class='hl'>預約演示</span></h2>
         <div class="yellow-bar"></div>
-        <form id="contact-form" action="https://formspree.io/f/mjgpbewl" method="POST">
-          <input type="hidden" name="_next" value="https://www.markforged.tw/thanks.html">
-          <input type="hidden" name="_subject" value="【Markforged 台灣】新詢價表單">
-          <input type="text" name="_gotcha" style="display:none">
+        <form id="contact-form" novalidate>
+          <div class="form-group mfq"><label data-zh="您的需求（可複選）" data-en="What you need (select all that apply)">您的需求（可複選）</label><div class="mfp"><label><input type="checkbox" name="need" value="0"><span data-zh="索取報價" data-en="Request a quote">索取報價</span></label><label><input type="checkbox" name="need" value="1"><span data-zh="預約產品演示" data-en="Book a demo">預約產品演示</span></label><label><input type="checkbox" name="need" value="2"><span data-zh="免費樣品列印" data-en="Free sample print">免費樣品列印</span></label><label><input type="checkbox" name="need" value="3"><span data-zh="技術諮詢" data-en="Technical consultation">技術諮詢</span></label><label><input type="checkbox" name="need" value="4"><span data-zh="舊機升級" data-en="Upgrade an older printer">舊機升級</span></label></div></div>
+          <div class="form-group mfq"><label data-zh="感興趣的產品（可複選）" data-en="Products of interest (select all that apply)">感興趣的產品（可複選）</label><div class="mfp"><label><input type="checkbox" name="prod" value="0"><span data-zh="FX10" data-en="FX10">FX10</span></label><label><input type="checkbox" name="prod" value="1"><span data-zh="FX10 金屬方案" data-en="FX10 metal solution">FX10 金屬方案</span></label><label><input type="checkbox" name="prod" value="2"><span data-zh="FX20" data-en="FX20">FX20</span></label><label><input type="checkbox" name="prod" value="3"><span data-zh="X7" data-en="X7">X7</span></label><label><input type="checkbox" name="prod" value="4"><span data-zh="X7 Field Edition" data-en="X7 Field Edition">X7 Field Edition</span></label><label><input type="checkbox" name="prod" value="5"><span data-zh="材料" data-en="Materials">材料</span></label><label><input type="checkbox" name="prod" value="6"><span data-zh="還不確定" data-en="Not sure yet">還不確定</span></label></div></div>
+          <div class="form-group mfq"><label data-zh="產業別" data-en="Industry">產業別</label><div class="mfp"><label><input type="radio" name="ind" value="0"><span data-zh="汽車與交通" data-en="Automotive and transport">汽車與交通</span></label><label><input type="radio" name="ind" value="1"><span data-zh="航太與國防" data-en="Aerospace and defence">航太與國防</span></label><label><input type="radio" name="ind" value="2"><span data-zh="無人機與無人載具" data-en="UAV and uncrewed systems">無人機與無人載具</span></label><label><input type="radio" name="ind" value="3"><span data-zh="醫療與生技" data-en="Medical and life sciences">醫療與生技</span></label><label><input type="radio" name="ind" value="4"><span data-zh="精密機械與模具" data-en="Precision machinery and tooling">精密機械與模具</span></label><label><input type="radio" name="ind" value="5"><span data-zh="電子與半導體" data-en="Electronics and semiconductor">電子與半導體</span></label><label><input type="radio" name="ind" value="6"><span data-zh="能源與重工業" data-en="Energy and heavy industry">能源與重工業</span></label><label><input type="radio" name="ind" value="7"><span data-zh="學術與研究機構" data-en="Academic and research">學術與研究機構</span></label><label><input type="radio" name="ind" value="8"><span data-zh="其他" data-en="Other">其他</span></label></div></div>
+          <div class="form-group mfq"><label data-zh="預計導入時程" data-en="Timeline">預計導入時程</label><div class="mfp"><label><input type="radio" name="time" value="0"><span data-zh="3 個月內" data-en="Within 3 months">3 個月內</span></label><label><input type="radio" name="time" value="1"><span data-zh="6 個月內" data-en="Within 6 months">6 個月內</span></label><label><input type="radio" name="time" value="2"><span data-zh="1 年內" data-en="Within 12 months">1 年內</span></label><label><input type="radio" name="time" value="3"><span data-zh="評估中" data-en="Still evaluating">評估中</span></label></div></div>
+          <div class="form-group mfq"><label data-zh="您從哪裡得知（選填）" data-en="How did you hear about us (optional)">您從哪裡得知（選填）</label><div class="mfp"><label><input type="radio" name="src" value="0"><span data-zh="Markforged 新聞中心" data-en="Markforged newsroom">Markforged 新聞中心</span></label><label><input type="radio" name="src" value="1"><span data-zh="Markforged 官方 LINE" data-en="Markforged LINE">Markforged 官方 LINE</span></label><label><input type="radio" name="src" value="2"><span data-zh="業務或經銷夥伴" data-en="Sales rep or partner">業務或經銷夥伴</span></label><label><input type="radio" name="src" value="3"><span data-zh="展會或研討會" data-en="Trade show or seminar">展會或研討會</span></label><label><input type="radio" name="src" value="4"><span data-zh="搜尋引擎" data-en="Search engine">搜尋引擎</span></label><label><input type="radio" name="src" value="5"><span data-zh="其他" data-en="Other">其他</span></label></div></div>
           <div class="form-row">
             <div class="form-group">
               <label data-zh="姓名 *" data-en="Name *">姓名 *</label>
@@ -54,8 +73,8 @@
               <input type="email" name="email" required data-ph-zh="your@email.com" data-ph-en="your@email.com" placeholder="your@email.com">
             </div>
             <div class="form-group">
-              <label data-zh="電話" data-en="Phone">電話</label>
-              <input type="tel" name="phone" data-ph-zh="電話號碼" data-ph-en="Phone number" placeholder="電話號碼">
+              <label data-zh="電話 *" data-en="Phone *">電話 *</label>
+              <input type="tel" name="phone" required data-ph-zh="電話號碼" data-ph-en="Phone number" placeholder="電話號碼">
             </div>
           </div>
           <div class="form-group">
@@ -63,23 +82,14 @@
             <input type="text" name="title" data-ph-zh="您的職稱" data-ph-en="Your job title" placeholder="您的職稱">
           </div>
           <div class="form-group">
-            <label data-zh="感興趣的產品" data-en="Products of Interest">感興趣的產品</label>
-            <select name="product">
-              <option value="" data-zh="請選擇..." data-en="Please select...">請選擇...</option>
-              <option value="FX10" data-zh="FX10（複合材料 + 金屬）" data-en="FX10 (Composite + Metal)">FX10（複合材料 + 金屬）</option>
-              <option value="FX10+MetalKit" data-zh="FX10 金屬方案（Metal Kit＋Wash-1＋Sinter-2）" data-en="FX10 Metal Solution (Metal Kit + Wash-1 + Sinter-2)">FX10 金屬方案（Metal Kit＋Wash-1＋Sinter-2）</option>
-              <option value="FX20" data-zh="FX20（大型高溫工業機）" data-en="FX20 (Large High-Temp)">FX20（大型高溫工業機）</option>
-              <option value="X7FE" data-zh="X7 Field Edition（現場部署）" data-en="X7 Field Edition (Field-Deployable)">X7 Field Edition（現場部署）</option>
-              <option value="multiple" data-zh="多台 / 整體方案" data-en="Multiple / Full Solution">多台 / 整體方案</option>
-              <option value="other" data-zh="其他 / 不確定" data-en="Other / Not Sure">其他 / 不確定</option>
-            </select>
-          </div>
-          <div class="form-group">
             <label data-zh="需求說明" data-en="Inquiry Details">需求說明</label>
-            <textarea name="message" rows="5" data-ph-zh="請描述您的應用場景、材料需求或任何問題..." data-ph-en="Describe your application, material needs, or any questions..." placeholder="請描述您的應用場景、材料需求或任何問題..."></textarea>
+            <textarea name="message" rows="4" data-ph-zh="請描述您的應用場景、材料需求或任何問題..." data-ph-en="Describe your application, material needs, or any questions..." placeholder="請描述您的應用場景、材料需求或任何問題..."></textarea>
           </div>
-          <button type="submit" class="btn-primary" style="width:100%;text-align:center;cursor:pointer;" data-zh="送出詢價" data-en="Submit Inquiry">送出詢價</button>
+          <label class="mfcs"><input type="checkbox" name="consent" value="1"><span data-zh="我同意 Markforged 使用以上資料與我聯繫，並依隱私權政策處理。" data-en="I agree that Markforged may use these details to contact me, in line with its privacy policy.">我同意 Markforged 使用以上資料與我聯繫，並依隱私權政策處理。</span></label>
+          <button type="submit" id="cfBtn" class="btn-primary" style="width:100%;text-align:center;cursor:pointer;" data-zh="送出詢價" data-en="Submit Inquiry">送出詢價</button>
+          <div class="mferr" id="cfErr" data-zh="請填寫姓名、公司名稱、電子郵件、電話，並勾選同意。" data-en="Please fill in your name, company, email and phone, and tick the consent box.">請填寫姓名、公司名稱、電子郵件、電話，並勾選同意。</div>
         </form>
+        <div class="mfok" id="cfOk"><div class="mfok-h" data-zh="已收到您的詢價" data-en="Inquiry received">已收到您的詢價</div><p data-zh="謝謝！Markforged 會在 3 個工作天內與您聯繫。急件可透過官方 LINE @markforged。" data-en="Thank you. Markforged will contact you within three working days. For urgent matters, message us on LINE @markforged.">謝謝！Markforged 會在 3 個工作天內與您聯繫。急件可透過官方 LINE @markforged。</p><ul id="cfList"></ul></div>
       </div>
 
       <!-- INFO SIDEBAR -->
@@ -145,5 +155,36 @@
 
 <div id="footer-slot"></div>
 <script src="shared.js?v=20260328b"></script>
+<script>
+/* 詢價表單 → 直接寫進 Brian 個人帳號的 Markforged VIP 申請表（同一份回覆表）；2026-10-31 取代 Formspree */
+(function(){
+var A="https://docs.google.com/forms/d/e/1FAIpQLScUzpAD5-p6okBrxFujaKvL6O7LnIqn-fd9mUUTqGhy7-HVaQ/formResponse", M={"need": {"e": null, "v": [null, null, null, null, null], "zh": ["\u7d22\u53d6\u5831\u50f9", "\u9810\u7d04\u7522\u54c1\u6f14\u793a", "\u514d\u8cbb\u6a23\u54c1\u5217\u5370", "\u6280\u8853\u8aee\u8a62", "\u820a\u6a5f\u5347\u7d1a"], "lab": "\u60a8\u7684\u9700\u6c42\uff08\u53ef\u8907\u9078\uff09"}, "prod": {"e": null, "v": [null, null, null, null, null, null, null], "zh": ["FX10", "FX10 \u91d1\u5c6c\u65b9\u6848", "FX20", "X7", "X7 Field Edition", "\u6750\u6599", "\u9084\u4e0d\u78ba\u5b9a"], "lab": "\u611f\u8208\u8da3\u7684\u7522\u54c1\uff08\u53ef\u8907\u9078\uff09"}, "ind": {"e": "entry.702564806", "v": ["\u6c7d\u8eca\u8207\u4ea4\u901a Automotive and transport", "\u822a\u592a\u8207\u570b\u9632 Aerospace and defence", "\u7121\u4eba\u6a5f\u8207\u7121\u4eba\u8f09\u5177 UAV and uncrewed systems", "\u91ab\u7642\u8207\u751f\u6280 Medical and life sciences", "\u7cbe\u5bc6\u6a5f\u68b0\u8207\u6a21\u5177 Precision machinery and tooling", "\u96fb\u5b50\u8207\u534a\u5c0e\u9ad4 Electronics and semiconductor", "\u80fd\u6e90\u8207\u91cd\u5de5\u696d Energy and heavy industry", "\u5b78\u8853\u8207\u7814\u7a76\u6a5f\u69cb Academic and research", "\u5176\u4ed6 Other"], "zh": ["\u6c7d\u8eca\u8207\u4ea4\u901a", "\u822a\u592a\u8207\u570b\u9632", "\u7121\u4eba\u6a5f\u8207\u7121\u4eba\u8f09\u5177", "\u91ab\u7642\u8207\u751f\u6280", "\u7cbe\u5bc6\u6a5f\u68b0\u8207\u6a21\u5177", "\u96fb\u5b50\u8207\u534a\u5c0e\u9ad4", "\u80fd\u6e90\u8207\u91cd\u5de5\u696d", "\u5b78\u8853\u8207\u7814\u7a76\u6a5f\u69cb", "\u5176\u4ed6"], "lab": "\u7522\u696d\u5225"}, "time": {"e": "entry.615165058", "v": ["3 \u500b\u6708\u5167 Within 3 months", "6 \u500b\u6708\u5167 Within 6 months", "1 \u5e74\u5167 Within 12 months", "\u8a55\u4f30\u4e2d\uff0c\u5c1a\u672a\u78ba\u5b9a Still evaluating"], "zh": ["3 \u500b\u6708\u5167", "6 \u500b\u6708\u5167", "1 \u5e74\u5167", "\u8a55\u4f30\u4e2d"], "lab": "\u9810\u8a08\u5c0e\u5165\u6642\u7a0b"}, "src": {"e": "entry.521954915", "v": ["Markforged \u65b0\u805e\u4e2d\u5fc3\u6587\u7ae0 Markforged newsroom article", "Markforged \u5b98\u65b9 LINE", "\u696d\u52d9\u6216\u7d93\u92b7\u5925\u4f34 Sales rep or partner", "\u5c55\u6703\u6216\u7814\u8a0e\u6703 Trade show or seminar", "\u641c\u5c0b\u5f15\u64ce Search engine", "\u5176\u4ed6 Other"], "zh": ["Markforged \u65b0\u805e\u4e2d\u5fc3", "Markforged \u5b98\u65b9 LINE", "\u696d\u52d9\u6216\u7d93\u92b7\u5925\u4f34", "\u5c55\u6703\u6216\u7814\u8a0e\u6703", "\u641c\u5c0b\u5f15\u64ce", "\u5176\u4ed6"], "lab": "\u60a8\u5f9e\u54ea\u88e1\u5f97\u77e5\uff08\u9078\u586b\uff09"}, "_c": {"name": "entry.2047457802", "company": "entry.1109148177", "title": "entry.39817803", "email": "entry.1534245742", "phone": "entry.586431209"}, "_sum": "entry.1436149164", "_topic": {"entry": "entry.543041358", "map": {"1": "\u91d1\u5c6c\u96f6\u4ef6\uff08FX10 + Metal Kit\uff09Metal parts"}}};
+var f=document.getElementById('contact-form'); if(!f) return;
+var b=document.getElementById('cfBtn'), er=document.getElementById('cfErr');
+var val=function(n){return ((f.elements[n]||{}).value||'').trim();};
+var picked=function(n){return [].map.call(f.querySelectorAll('input[name="'+n+'"]:checked'),function(x){return +x.value;});};
+f.addEventListener('submit',function(ev){
+  ev.preventDefault(); er.style.display='none';
+  if(!val('name')||!val('company')||!val('phone')||!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(val('email'))||!f.elements.consent.checked){er.style.display='block';return;}
+  var p=new URLSearchParams(), rows=[];
+  Object.keys(M._c).forEach(function(k){p.append(M._c[k],val(k));});
+  ['need','prod','ind','time','src'].forEach(function(q){
+    var ix=picked(q); if(!ix.length) return;
+    rows.push([M[q].lab, ix.map(function(i){return M[q].zh[i];}).join('、')]);
+    if(M[q].e) ix.forEach(function(i){p.append(M[q].e,M[q].v[i]);});
+  });
+  picked('prod').forEach(function(i){var t=M._topic.map[String(i)]; if(t) p.append(M._topic.entry,t);});
+  var sum='【官網聯絡頁 www.markforged.tw/contact】'+rows.filter(function(r){return /需求|產品/.test(r[0]);}).map(function(r){return r[0].replace(/（.*?）/,'')+'：'+r[1];}).join('｜')+(val('message')?'｜需求說明：'+val('message'):'');
+  p.append(M._sum,sum);
+  b.disabled=true;
+  try{fetch('https://hits.sh/www.markforged.tw/contact-submit.svg?_='+Date.now(),{mode:'no-cors'}).catch(function(){});}catch(e){}
+  fetch(A,{method:'POST',mode:'no-cors',body:p}).then(function(){
+    document.getElementById('cfList').innerHTML=rows.map(function(r){return '<li><b>'+r[0].replace(/（.*?）/,'')+'</b><span>'+r[1]+'</span></li>';}).join('');
+    f.style.display='none'; document.getElementById('cfOk').style.display='block';
+    document.getElementById('cfOk').scrollIntoView({behavior:'smooth',block:'center'});
+  }).catch(function(){b.disabled=false; er.style.display='block';});
+});
+})();
+</script>
 </body>
 </html>
