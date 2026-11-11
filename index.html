@@ -24,7 +24,7 @@
 <link rel="alternate" hreflang="en" href="https://www.markforged.tw/">
 <link rel="icon" type="image/png" href="images/favicon-32.png">
 <link rel="stylesheet" href="shared.css?v=20260328b">
-<link rel="stylesheet" href="home-motion.css?v=20261111">
+<link rel="stylesheet" href="home-motion.css?v=20261111b">
 <link rel="preload" as="image" href="images/home-hero-poster.jpg">
 <script>(function(){var d=document.documentElement;if(!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){d.classList.add('mo');window.__moFallback=setTimeout(function(){d.classList.add('mo-fallback')},3000);}})();</script>
 <script type="application/ld+json">{
@@ -304,23 +304,27 @@
 
 <!-- BRIAN PERSPECTIVE FILM -->
 <section class="dark-section" style="background:#000; padding: 80px 0;">
-  <div class="section-inner" style="max-width:960px; margin:0 auto; padding:0 24px;">
+  <div class="section-inner" style="max-width:1200px; margin:0 auto; padding:0 24px;">
     <p class="section-label" style="color:#FFFF00;" data-zh="觀點短片" data-en="Perspective Film">觀點短片</p>
     <h2 class="section-title" style="color:#fff;" data-zh="科技、創新與未來的<span class='hl'>思考</span>" data-en="A Perspective on <span class='hl'>Technology & Innovation</span>">科技、創新與未來的<span class="hl">思考</span></h2>
     <div class="yellow-bar"></div>
-    <div class="reveal" style="margin-top:40px; position:relative; overflow:hidden; border: 1px solid #1a1a1a; background:#000;">
-      <video class="brian-film brian-film-zh" autoplay muted loop playsinline controls style="width:100%; display:block; border-radius:8px;" poster="images/fx20_official.jpg">
-        <source src="images/brian-quote-zh.mp4" type="video/mp4">
-      </video>
-      <video class="brian-film brian-film-en" autoplay muted loop playsinline controls style="width:100%; display:none; border-radius:8px;" poster="images/fx20_official.jpg">
-        <source src="images/brian-quote-en.mp4" type="video/mp4">
-      </video>
-      <div style="position:absolute;top:16px;left:16px;width:24px;height:24px;border-top:2px solid #FFFF00;border-left:2px solid #FFFF00;"></div>
-      <div style="position:absolute;top:16px;right:16px;width:24px;height:24px;border-top:2px solid #FFFF00;border-right:2px solid #FFFF00;"></div>
-      <div style="position:absolute;bottom:16px;left:16px;width:24px;height:24px;border-bottom:2px solid #FFFF00;border-left:2px solid #FFFF00;"></div>
-      <div style="position:absolute;bottom:16px;right:16px;width:24px;height:24px;border-bottom:2px solid #FFFF00;border-right:2px solid #FFFF00;"></div>
+    <!-- R11:BEGIN 觀點動畫（取代原 1080×1080 金句影片 brian-quote-zh/en.mp4）-->
+    <div class="pq" id="pq" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Brian Chen 觀點 Perspective">
+      <i class="pq-k tl" aria-hidden="true"></i><i class="pq-k tr" aria-hidden="true"></i><i class="pq-k bl" aria-hidden="true"></i><i class="pq-k br" aria-hidden="true"></i>
+      <canvas class="pq-gl" aria-hidden="true"></canvas>
+      <div class="pq-head" aria-hidden="true"><span class="pq-cur">01</span><span class="pq-tot">/ 08</span></div>
+      <div class="pq-stage">
+        <div class="pq-slide in now"><p class="pq-main" lang="zh-TW"><span class="pq-l"><span class="pq-li">我們不該只做</span></span><span class="pq-l"><span class="pq-li">人做得到的事，</span></span><span class="pq-l"><span class="pq-li">要做的是</span></span><span class="pq-l"><span class="pq-li">人<em>做不到</em>的事。</span></span></p><p class="pq-sub" lang="en">We should not only do what people can do. We should do what people <em>cannot do</em>.</p></div>
+      </div>
+      <a class="pq-ind on" href="aerospace.html"><span>01</span>航太 Aerospace <b>→</b></a>
+      <div class="pq-ctrl">
+        <button type="button" class="pq-prev" aria-label="上一則 Previous">←</button>
+        <div class="pq-ticks"></div>
+        <button type="button" class="pq-next" aria-label="下一則 Next">→</button>
+      </div>
+      <p class="pq-live" aria-live="off"></p>
     </div>
-
+    <!-- R11:END -->
   </div>
 </section>
 
@@ -560,6 +564,8 @@ html[lang="en"] .brian-film-en { display:block !important; }
 
 <div id="footer-slot"></div>
 <script src="shared.js?v=20260328b"></script>
-<script src="home-motion.js?v=20261111" defer></script>
+<script src="home-motion.js?v=20261111b" defer></script>
+<script src="home-particles.js?v=20261111" defer></script>
+<script src="home-quotes.js?v=20261111" defer></script>
 </body>
 </html>

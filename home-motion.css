@@ -178,3 +178,83 @@ html[lang="en"] .hx h1 { font-size: clamp(38px, 5.2vw, 80px); max-width: 13em; }
   .hx-lines i { transform: none; }
   .hx h1 em { background-size: 100% 4px; }
 }
+
+/* ================================================================
+   觀點動畫＋產業 3D 粒子（第十一輪 · 2026-11-11）— 取代原 1080×1080 金句影片
+   ================================================================ */
+.pq { position: relative; margin-top: 40px; min-height: 640px; padding: 52px 64px 44px; display: flex; flex-direction: column;
+  background: #050505; border: 1px solid #171717; overflow: hidden; isolation: isolate; outline: none; }
+.pq:focus-visible { border-color: #FFFF00; }
+.pq::after { content: ''; position: absolute; inset: 0; z-index: -2; pointer-events: none;
+  background: radial-gradient(ellipse 55% 70% at 72% 52%, rgba(255,255,0,.07), rgba(255,255,0,0) 60%), radial-gradient(ellipse 40% 50% at 70% 60%, rgba(120,150,180,.10), rgba(0,0,0,0) 70%); }
+.pq-gl { position: absolute; top: 0; right: 0; width: 62%; height: 100%; z-index: -1; display: block; }
+.pq::before { content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: linear-gradient(90deg, #050505 0%, rgba(5,5,5,.94) 36%, rgba(5,5,5,.2) 58%, rgba(5,5,5,0) 70%); }
+.pq > .pq-head, .pq > .pq-stage, .pq > .pq-ctrl { position: relative; z-index: 1; }
+.pq-k { position: absolute !important; width: 22px; height: 22px; z-index: 3; pointer-events: none; }
+.pq-k.tl { top: 14px; left: 14px; border-top: 2px solid #FFFF00; border-left: 2px solid #FFFF00; }
+.pq-k.tr { top: 14px; right: 14px; border-top: 2px solid #FFFF00; border-right: 2px solid #FFFF00; }
+.pq-k.bl { bottom: 14px; left: 14px; border-bottom: 2px solid #FFFF00; border-left: 2px solid #FFFF00; }
+.pq-k.br { bottom: 14px; right: 14px; border-bottom: 2px solid #FFFF00; border-right: 2px solid #FFFF00; }
+.pq-head { display: flex; align-items: baseline; gap: 12px; }
+.pq-cur { display: inline-block; font-size: 64px; font-weight: 900; line-height: 1; color: transparent; -webkit-text-stroke: 1px rgba(255,255,0,.8); font-variant-numeric: tabular-nums; }
+.pq-cur.flip { animation: pq-flip .8s cubic-bezier(.16,1,.3,1); }
+@keyframes pq-flip { from { opacity: 0; transform: translateY(40%); } }
+.pq-tot { font-size: 13px; letter-spacing: 3px; color: #6b6b6b; }
+.pq-stage { flex: 1; display: grid; align-items: center; max-width: 56%; padding: 28px 0; }
+.pq-slide { grid-area: 1 / 1; opacity: 0; visibility: hidden; transition: opacity .5s ease, visibility 0s linear .5s; }
+.pq-slide.in { opacity: 1; visibility: visible; transition: opacity .3s ease; }
+.pq-slide.out { opacity: 0; visibility: visible; transform: translateY(-14px); filter: blur(6px); transition: opacity .55s ease, transform .6s ease, filter .6s ease; }
+.pq-main { margin: 0; color: #fff; font-weight: 900; font-size: calc(var(--fs, 1) * clamp(26px, 2.95vw, 44px)); line-height: 1.3; letter-spacing: .01em; }
+.pq-li { white-space: nowrap; }  /* 行已斷好，不再自動折；放不下由 home-quotes.js 依實測行寬縮字 */
+/* 手機：英文在單字之間自然換行（不會有孤字問題），中文維持不折行＋依行寬縮字 */
+@media (max-width: 860px) { .pq-main[lang="en"] .pq-li, .pq-sub .pq-li { white-space: normal; } }
+.pq-slide.pq-en .pq-main { font-weight: 800; font-size: calc(var(--fs, 1) * clamp(26px, 2.8vw, 44px)); line-height: 1.16; letter-spacing: -.012em; }
+.pq-l { display: block; overflow: hidden; padding-bottom: .06em; }
+.pq-li { display: inline-block; transform: translateY(108%); transition: transform 1s cubic-bezier(.16,1,.3,1) calc(.12s + var(--k, 0) * .11s); }
+.pq-slide.in .pq-li { transform: none; }
+.pq-slide.now .pq-li, .pq-slide.now .pq-sub, .pq-slide.now .pq-sub::before, .pq-slide.now em, .pq-slide.now .pq-sign { transition: none !important; }
+.pq-main em { font-style: normal; color: #FFFF00; background: linear-gradient(#FFFF00, #FFFF00) 0 100% / 0% 2px no-repeat; transition: background-size .9s cubic-bezier(.7,0,.2,1) .95s; }
+.pq-slide.in .pq-main em { background-size: 100% 2px; }
+/* 中英大小平衡：英文用跟中文同一個縮放基準，約中文的 0.72 倍（拉丁字同字號看起來比中文小），字重 600、淺灰白 */
+.pq-sub { position: relative; margin: 24px 0 0; padding-top: 22px; color: #d3d7db; font-weight: 600; font-size: calc(var(--fs, 1) * clamp(20px, 2.15vw, 31px)); line-height: 1.22; letter-spacing: -.01em; }
+.pq-sub::before { content: ''; position: absolute; left: 0; top: 0; width: 40px; height: 2px; background: #FFFF00; transform: scaleX(0); transform-origin: 0 50%; transition: transform .8s cubic-bezier(.7,0,.2,1) .55s; }
+.pq-slide.in .pq-sub::before { transform: scaleX(1); }
+.pq-sub em { font-style: normal; color: #FFFF00; }
+.pq-sign { margin-top: 30px; padding-top: 18px; border-top: 1px solid #2a2a2a; opacity: 0; transition: opacity .9s ease 1.5s; }
+.pq-slide.in .pq-sign { opacity: 1; }
+.pq-sign b { display: block; color: #FFFF00; font-size: 22px; font-weight: 800; margin-bottom: 4px; }
+.pq-sign small { color: #8a8a8a; font-size: 12.5px; letter-spacing: .4px; }
+.pq-ind { position: absolute !important; right: 44px; bottom: 44px; z-index: 3; color: #fff; font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; text-decoration: none;
+  opacity: 0; transform: translateY(8px); transition: opacity .7s ease .5s, transform .7s ease .5s; }
+.pq-ind.on { opacity: 1; transform: none; }
+.pq-ind span { color: #FFFF00; margin-right: 12px; }
+.pq-ind b { color: #FFFF00; font-weight: 400; margin-left: 4px; }
+.pq-ind:hover { color: #FFFF00; text-decoration: none; }
+.pq-ctrl { display: flex; align-items: center; gap: 14px; }
+.pq-ctrl button.pq-prev, .pq-ctrl button.pq-next { width: 40px; height: 40px; border: 1px solid rgba(255,255,255,.2); background: transparent; color: #ddd; font-size: 16px; cursor: pointer; transition: border-color .3s, color .3s; }
+.pq-ctrl button.pq-prev:hover, .pq-ctrl button.pq-next:hover { border-color: #FFFF00; color: #FFFF00; }
+.pq-ticks { display: flex; gap: 6px; }
+.pq-t { position: relative; width: 30px; height: 18px; padding: 0; border: 0; background: none; cursor: pointer; }
+.pq-t::before { content: ''; position: absolute; left: 0; right: 0; top: 8px; height: 2px; background: rgba(255,255,255,.18); }
+.pq-t i { position: absolute; left: 0; right: 0; top: 8px; height: 2px; background: #FFFF00; transform: scaleX(0); transform-origin: 0 50%; }
+.pq-t.done i { transform: scaleX(1); }
+.pq-live { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.pq-nogl::after { background: radial-gradient(ellipse 50% 60% at 75% 50%, rgba(255,255,0,.10), rgba(0,0,0,0) 65%); }
+@media (max-width: 860px) {
+  .pq { min-height: 0; padding: 330px 22px 26px; }
+  .pq-gl { width: 100%; height: 340px; }
+  .pq::before { background: linear-gradient(180deg, rgba(5,5,5,0) 0%, rgba(5,5,5,0) 230px, #050505 340px, #050505 100%); }
+  .pq::after { background: radial-gradient(ellipse 80% 40% at 50% 22%, rgba(255,255,0,.08), rgba(0,0,0,0) 70%); }
+  .pq-head { position: absolute !important; top: 22px; left: 22px; }
+  .pq-cur { font-size: 44px; }
+  .pq-ind { top: 294px; bottom: auto; left: 22px; right: auto; font-size: 11px; }
+  .pq-stage { max-width: 100%; padding: 22px 0 26px; }
+  .pq-main { font-size: calc(var(--fs, 1) * clamp(24px, 6.8vw, 30px)); }
+  .pq-slide.pq-en .pq-main { font-size: calc(var(--fs, 1) * clamp(24px, 6.6vw, 30px)); }
+  .pq-sub { font-size: calc(var(--fs, 1) * clamp(18px, 5.2vw, 22px)); margin-top: 18px; padding-top: 16px; }
+  .pq-t { width: 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pq-li, .pq-sub, .pq-main em, .pq-sign, .pq-slide, .pq-cur.flip, .pq-ind { transition: none !important; animation: none !important; transform: none !important; }
+}
