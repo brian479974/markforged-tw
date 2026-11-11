@@ -1,0 +1,109 @@
+/* ================================================================
+   products-v3.css — 產品總覽頁 v3（第十四輪 · 2026-11-11）
+   淺色展示間：去背機器＋柔和落地陰影、細線分隔、多角度相簿。
+   動態只有輕淡入（16px）與相簿交叉淡化；減少動態時全部關閉。
+   白底不放黃字：強調一律黑字＋黃色底（VIS v2.0）。
+   ================================================================ */
+.v3-page { background: #f5f5f3; color: #111; }
+.v3-page .cta-band { margin-top: 0; }
+
+/* 輕淡入（取代遮罩展開、視差、光暈） */
+.v3-mo [data-rv] { opacity: 0; transform: translateY(16px); transition: opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1); transition-delay: calc(var(--i, 0) * 80ms); }
+.v3-mo [data-rv].in, .v3-fallback [data-rv] { opacity: 1; transform: none; }
+
+/* ─── 主視覺 ─── */
+.v3-hero { background: linear-gradient(180deg, #fafaf8 0%, #f1f1ee 100%); padding: calc(var(--nav-h) + 64px) 32px 0; border-bottom: 1px solid #e4e4e0; }
+.v3-hero-in { max-width: 1200px; margin: 0 auto; text-align: center; }
+.v3-hero .breadcrumb { font-size: 12px; color: #888; margin-bottom: 20px; }
+.v3-hero .breadcrumb a { color: #111; text-decoration: none; border-bottom: 2px solid #FFFF00; }
+.v3-hero .breadcrumb a::after { content: ''; }
+.v3-hero .breadcrumb span::before { content: ' / '; color: #bbb; }
+.v3-hero .section-label { color: #6b6f74; letter-spacing: 4px; font-size: 11px; }
+.v3-hero h1 { color: #111; font-size: clamp(34px, 4.6vw, 64px); font-weight: 800; line-height: 1.06; letter-spacing: -.02em; margin: 8px 0 18px; }
+.v3-hero h1 em { font-style: normal; background: linear-gradient(transparent 62%, #FFFF00 62%); padding: 0 .08em; }
+.v3-hero-in > p:last-child { color: #5c6066; font-size: clamp(15px, 1.2vw, 17px); max-width: 620px; margin: 0 auto; line-height: 1.7; }
+
+.v3-lineup { max-width: 1120px; margin: 48px auto 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; align-items: end; }
+.v3-lu-i { display: flex; flex-direction: column; align-items: center; text-decoration: none; padding-bottom: 36px; }
+.v3-lu-img { position: relative; display: flex; align-items: flex-end; justify-content: center; width: 100%; height: clamp(150px, 19vw, 270px); }
+.v3-lu-img img { max-height: 100%; max-width: 92%; width: auto; height: auto; object-fit: contain; position: relative; z-index: 1; transition: transform .6s cubic-bezier(.2,.7,.2,1); filter: drop-shadow(0 18px 16px rgba(0,0,0,.16)) drop-shadow(0 2px 3px rgba(0,0,0,.12)); }
+
+.v3-lu-i:hover .v3-lu-img img { transform: translateY(-4px); }
+.v3-lu-name { margin-top: 26px; color: #111; font-size: clamp(14px, 1.25vw, 17px); font-weight: 800; }
+.v3-lu-tag { margin-top: 4px; color: #7a7e83; font-size: 12px; }
+.v3-lu-i:hover .v3-lu-name { box-shadow: inset 0 -6px 0 #FFFF00; }
+
+/* ─── 黏頂機型切換列 ─── */
+.v3-sub { position: sticky; top: var(--nav-h); z-index: 50; background: rgba(250,250,248,.88); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border-bottom: 1px solid #e4e4e0; }
+.v3-sub-in { max-width: 1200px; margin: 0 auto; display: flex; justify-content: center; gap: 2px; overflow-x: auto; scrollbar-width: none; padding: 0 16px; }
+.v3-sub-in::-webkit-scrollbar { display: none; }
+.v3-sub a { position: relative; flex: none; padding: 15px 18px; color: #6b6f74; font-size: 13px; font-weight: 700; text-decoration: none; white-space: nowrap; transition: color .25s; }
+.v3-sub a::after { content: ''; position: absolute; left: 18px; right: 18px; bottom: 0; height: 3px; background: #FFFF00; opacity: 0; transition: opacity .25s; }
+.v3-sub a:hover, .v3-sub a.on { color: #111; }
+.v3-sub a.on::after { opacity: 1; }
+
+/* ─── 產品章節 ─── */
+.v3-ch { background: #fff; padding: 104px 32px; scroll-margin-top: calc(var(--nav-h) + 50px); border-bottom: 1px solid #ececea; }
+.v3-ch:nth-of-type(even) { background: #f7f7f5; }
+.v3-in { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 1fr; gap: 72px; align-items: center; }
+.v3-ch.flip .v3-media { order: 2; }
+
+.v3-view { position: relative; aspect-ratio: 4 / 3; background: #f1f1ee; overflow: hidden; }
+.v3-ch:nth-of-type(even) .v3-view { background: #ebebe8; }
+.v3-main { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity .35s ease; }
+.v3-view.is-cut .v3-main { object-fit: contain; padding: 7% 12% 9%; box-sizing: border-box; }
+.v3-view.is-cut { background: radial-gradient(ellipse 70% 60% at 50% 45%, #fdfdfc 0%, #efefec 100%); }
+.v3-floor { position: absolute; left: 22%; right: 22%; bottom: 7.4%; height: 5%; border-radius: 50%; background: radial-gradient(ellipse at center, rgba(0,0,0,.20), rgba(0,0,0,0) 70%); opacity: 0; transition: opacity .35s; pointer-events: none; }
+.v3-view.is-cut .v3-floor { opacity: 0; }
+/* 去背圖：陰影跟著機器輪廓走（不用固定位置的橢圓，避免機器懸空） */
+.v3-view.is-cut .v3-main { filter: drop-shadow(0 24px 22px rgba(0,0,0,.15)) drop-shadow(0 3px 4px rgba(0,0,0,.12)); }
+.v3-main.fading { opacity: 0; }
+/* 圖卡（例：四件套組）完整呈現不裁切 */
+.v3-ch .v3-view.is-fit { background: #000; }
+.v3-view.is-fit .v3-main { object-fit: contain; }
+
+.v3-thumbs { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-top: 12px; }
+.v3-th { padding: 0; border: 0; background: none; cursor: pointer; text-align: left; font: inherit; }
+.v3-th-img { display: block; aspect-ratio: 4 / 3; background: #ebebe8; overflow: hidden; outline: 1px solid transparent; outline-offset: -1px; transition: outline-color .25s; }
+.v3-th-img img { width: 100%; height: 100%; object-fit: cover; opacity: .82; transition: opacity .25s; }
+.v3-th-img.is-cut img { object-fit: contain; padding: 8%; box-sizing: border-box; filter: drop-shadow(0 4px 4px rgba(0,0,0,.15)); }
+.v3-th-cap { display: block; margin-top: 6px; color: #7a7e83; font-size: 11.5px; line-height: 1.35; }
+.v3-th:hover .v3-th-img img, .v3-th.on .v3-th-img img { opacity: 1; }
+.v3-th.on .v3-th-img { outline: 2px solid #111; }
+.v3-th.on .v3-th-cap { color: #111; font-weight: 700; }
+.v3-th:focus-visible .v3-th-img { outline: 2px solid #111; }
+
+.v3-meta { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+.v3-idx { color: #9a9ea3; font-size: 12px; letter-spacing: 2px; font-variant-numeric: tabular-nums; }
+.v3-tag { background: #FFFF00; color: #111; font-size: 11px; font-weight: 800; letter-spacing: 1.5px; padding: 4px 10px; }
+.v3-name { color: #111; font-size: clamp(34px, 3.8vw, 54px); font-weight: 800; line-height: 1.05; letter-spacing: -.02em; margin: 0 0 20px; }
+.v3-desc { color: #4d5157; font-size: 16px; line-height: 1.8; margin: 0 0 32px; max-width: 560px; }
+.v3-specs { list-style: none; margin: 0 0 36px; padding: 0; display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid #e3e3df; }
+.v3-spec { padding: 16px 18px 16px 0; border-bottom: 1px solid #e3e3df; display: flex; flex-direction: column; justify-content: center; gap: 4px; min-height: 64px; }
+.v3-spec:nth-child(odd) { border-right: 1px solid #e3e3df; }
+.v3-spec:nth-child(even) { padding-left: 18px; }
+.v3-spec small { color: #7a7e83; font-size: 12px; letter-spacing: .04em; }
+.v3-spec b { color: #111; font-size: 15px; font-weight: 700; line-height: 1.45; }
+
+@media (max-width: 900px) {
+  .v3-hero { padding: calc(var(--nav-h) + 40px) 18px 0; }
+  .v3-lineup { gap: 8px; margin-top: 32px; }
+  .v3-lu-i { padding-bottom: 24px; }
+  .v3-lu-img { height: 22vw; }
+  .v3-lu-name { margin-top: 16px; font-size: 11.5px; text-align: center; }
+  .v3-lu-tag { display: none; }
+  .v3-sub-in { justify-content: flex-start; }
+  .v3-sub a { padding: 13px 12px; font-size: 12px; }
+  .v3-sub a::after { left: 12px; right: 12px; }
+  .v3-ch { padding: 64px 18px; }
+  .v3-in { grid-template-columns: 1fr; gap: 32px; }
+  .v3-ch.flip .v3-media { order: 0; }
+  .v3-thumbs { grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .v3-th-cap { font-size: 10px; }
+  .v3-specs { grid-template-columns: 1fr; }
+  .v3-spec:nth-child(odd) { border-right: 0; }
+  .v3-spec:nth-child(even) { padding-left: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .v3-page [data-rv], .v3-main, .v3-lu-img img { transition: none !important; opacity: 1 !important; transform: none !important; }
+}
