@@ -15,7 +15,7 @@
     ['.section-label', 'mask'], ['.section-title', 'mask'], ['.feature-card', ''], ['.product-card', ''],
     ['.solution-card', ''], ['.oc-card', ''], ['.vc', ''], ['.vip-left', ''], ['.vip-stat-card', ''],
     ['.cta-band .eyebrow', 'mask'], ['.cta-band h2', 'mask'], ['.cta-band p', 'fade'], ['.cta-band .btn-primary, .cta-band .btn-dark, .cta-band a', 'fade'],
-    ['.home-metal > div', ''], ['.sx-copy > *', ''], ['.sx-feats > div', ''], ['.text-center.mt-48', 'fade']
+    ['.home-metal > div', ''], ['.sx-copy > *', ''], ['.sx-feats > div', ''], ['.text-center.mt-48', 'fade'], ['.tg-i', '']
   ];
   GROUPS.forEach(function (g) {
     document.querySelectorAll(g[0]).forEach(function (el) {

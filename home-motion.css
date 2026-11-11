@@ -96,15 +96,26 @@ html[lang="en"] .hx h1 { font-size: clamp(38px, 5.2vw, 80px); max-width: 13em; }
 .stat-item.in::before { transform: scaleX(1); }
 .stat-number { font-variant-numeric: tabular-nums; }
 
-/* ─── 標語跑馬（原廠 FX 系列活動標語） ─── */
-.mq { background: #000; border-top: 1px solid #141414; border-bottom: 1px solid #141414; overflow: hidden; padding: 26px 0; }
-.mq-track { display: flex; width: max-content; animation: mq 46s linear infinite; }
-.mq-track span { font-size: clamp(26px, 3.6vw, 52px); font-weight: 900; letter-spacing: -.01em; white-space: nowrap; padding: 0 .55em;
-  color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,.34); }
-.mq-track span:nth-child(4n+1) { color: #fff; -webkit-text-stroke: 0; }
-.mq-track i { font-style: normal; font-size: clamp(26px, 3.6vw, 52px); font-weight: 300; color: #FFFF00; align-self: center; }
-@keyframes mq { to { transform: translateX(-50%); } }
-.mq:hover .mq-track { animation-play-state: paused; }
+/* ─── 原廠 FX 系列活動標語帶（第十二輪：取代跑馬燈）───
+   靜態三欄：小號黃色編號＋寬字距大寫，細線分隔；進場依序浮現，一道很淡的光慢慢掃過 */
+.tg { position: relative; overflow: hidden; background: #000; border-top: 1px solid #161616; border-bottom: 1px solid #161616; padding: 34px 32px; }
+.tg-in { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); }
+.tg-i { display: flex; align-items: baseline; gap: 16px; padding: 6px 28px; border-left: 1px solid #262626; }
+.tg-i:first-child { border-left: 0; padding-left: 0; }
+.tg-n { color: #FFFF00; font-size: 11px; font-weight: 700; letter-spacing: 3px; font-variant-numeric: tabular-nums; }
+.tg-i b { color: #fff; font-size: clamp(14px, 1.35vw, 18px); font-weight: 700; letter-spacing: .26em; text-transform: uppercase; white-space: nowrap; }
+.tg::after { content: ''; position: absolute; top: 0; bottom: 0; left: -30%; width: 22%; pointer-events: none;
+  background: linear-gradient(100deg, rgba(255,255,0,0), rgba(255,255,0,.07), rgba(255,255,0,0)); transform: skewX(-18deg);
+  animation: tg-sweep 9s 1.5s ease-in-out infinite; }
+@keyframes tg-sweep { 0% { left: -30%; } 45%, 100% { left: 115%; } }
+@media (max-width: 900px) {
+  .tg { padding: 18px 20px; }
+  .tg-in { grid-template-columns: 1fr; }
+  .tg-i, .tg-i:first-child { padding: 14px 0; border-left: 0; border-top: 1px solid #1f1f1f; }
+  .tg-i:first-child { border-top: 0; }
+  .tg-i b { font-size: 14px; letter-spacing: .22em; }
+}
+@media (prefers-reduced-motion: reduce) { .tg::after { animation: none; display: none; } }
 
 /* ─── FX10 展示區（原廠爆炸圖） ─── */
 .sx { position: relative; overflow: hidden; background: #0b1217; padding: 140px 32px; color: #fff; isolation: isolate; }
@@ -173,7 +184,7 @@ html[lang="en"] .hx h1 { font-size: clamp(38px, 5.2vw, 80px); max-width: 13em; }
 
 /* 減少動態：全部關掉 */
 @media (prefers-reduced-motion: reduce) {
-  .hx-media video, .hx-media img, .hx-lines i, .mq-track, .vip-stripes, .cta-band::after, .hx-scroll i::after { animation: none !important; }
+  .hx-media video, .hx-media img, .hx-lines i, .vip-stripes, .cta-band::after, .hx-scroll i::after { animation: none !important; }
   .hx-media video, .hx-media img { transform: none; }
   .hx-lines i { transform: none; }
   .hx h1 em { background-size: 100% 4px; }
@@ -223,8 +234,8 @@ html[lang="en"] .hx h1 { font-size: clamp(38px, 5.2vw, 80px); max-width: 13em; }
 .pq-sub em { font-style: normal; color: #FFFF00; }
 .pq-sign { margin-top: 36px; padding-top: 22px; border-top: 1px solid #2a2a2a; opacity: 0; transition: opacity .9s ease 1.5s; }
 .pq-slide.in .pq-sign { opacity: 1; }
-.pq-sign b { display: block; color: #FFFF00; font-size: clamp(26px, 2.2vw, 32px); font-weight: 800; line-height: 1.2; margin-bottom: 8px; }
-.pq-sign small { display: block; color: #c4c8cc; font-size: clamp(15px, 1.2vw, 17px); letter-spacing: .3px; }
+.pq-sign b { display: block; color: #FFFF00; font-size: clamp(21px, 1.7vw, 24px); font-weight: 800; line-height: 1.25; margin-bottom: 8px; }
+.pq-sign small { display: block; color: #c4c8cc; font-size: clamp(14.5px, 1.12vw, 16px); letter-spacing: .3px; }
 .pq-ind { position: absolute !important; right: 44px; bottom: 44px; z-index: 3; color: #fff; font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; text-decoration: none;
   opacity: 0; transform: translateY(8px); transition: opacity .7s ease .5s, transform .7s ease .5s; }
 .pq-ind.on { opacity: 1; transform: none; }
@@ -252,7 +263,7 @@ html[lang="en"] .hx h1 { font-size: clamp(38px, 5.2vw, 80px); max-width: 13em; }
   .pq-stage { max-width: 100%; padding: 22px 0 26px; }
   .pq-main { font-size: calc(var(--fs, 1) * clamp(20px, 5.6vw, 24px)); }
   .pq-slide.pq-en .pq-main { font-size: calc(var(--fs, 1) * clamp(20px, 5.4vw, 24px)); }
-  .pq-sign b { font-size: 26px; }
+  .pq-sign b { font-size: 21px; }
   .pq-sign small { font-size: 14.5px; }
   .pq-sub { font-size: calc(var(--fs, 1) * clamp(15px, 4.3vw, 18px)); margin-top: 16px; padding-top: 14px; }
   .pq-t { width: 22px; }
