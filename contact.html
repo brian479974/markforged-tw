@@ -14,6 +14,9 @@
 .mfp label{text-transform:none;letter-spacing:0;display:inline-flex;align-items:center;border:1px solid #ccc;border-radius:22px;padding:7px 14px;font-size:13.5px;color:#333;cursor:pointer;background:#fff;font-weight:500;margin:0}
 .mfp label:hover{border-color:#000}
 .mfp input{position:absolute;opacity:0;pointer-events:none}
+/* 2026-11-11 版面：隱藏的勾選框原本吃到 .form-group input 的 width:100%，絕對定位後把整頁往右撐寬（桌機出現橫向捲軸、手機整頁縮小）→ 縮成 1px、定位在膠囊內 */
+.mfp label{position:relative}
+.mfp label input{width:1px;height:1px;min-height:0;padding:0;margin:0;border:0;left:0;top:0}
 .mfp label:has(input:checked){background:#000;color:#FFFF00;border-color:#000;font-weight:700}
 .mfcs{display:flex;gap:8px;align-items:flex-start;font-size:12.5px;color:#555;line-height:1.6;margin:6px 0 14px;font-weight:400}
 .mfcs input{margin-top:4px;width:auto}
