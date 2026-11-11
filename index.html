@@ -24,6 +24,9 @@
 <link rel="alternate" hreflang="en" href="https://www.markforged.tw/">
 <link rel="icon" type="image/png" href="images/favicon-32.png">
 <link rel="stylesheet" href="shared.css?v=20260328b">
+<link rel="stylesheet" href="home-motion.css?v=20261111">
+<link rel="preload" as="image" href="images/home-hero-poster.jpg">
+<script>(function(){var d=document.documentElement;if(!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){d.classList.add('mo');window.__moFallback=setTimeout(function(){d.classList.add('mo-fallback')},3000);}})();</script>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -170,9 +173,15 @@
 <div id="nav-slot"></div>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-gradient"></div>
-  <img class="hero-bg hero-fx10" src="images/fx10_official.jpg" alt="Markforged FX10 工業級複合材料與金屬 3D 列印機" loading="eager">
+<section class="hero hx">
+  <div class="hx-media" aria-hidden="true">
+    <video class="hx-video" autoplay muted loop playsinline preload="auto" poster="images/home-hero-poster.jpg">
+      <source src="videos/home-hero-loop-1080.mp4" type="video/mp4" media="(min-width: 901px)">
+      <source src="videos/home-hero-loop-720.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hx-shade" aria-hidden="true"></div>
+  <div class="hx-lines" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
   <div class="hero-content">
     <p class="hero-eyebrow" data-zh="Markforged 台灣官方" data-en="Markforged Taiwan Official">Markforged 台灣官方</p>
     <h1 data-zh="重新定義<em>工業製造</em>的未來" data-en="Redefining the Future of <em>Industrial Manufacturing</em>">重新定義<em>工業製造</em>的未來</h1>
@@ -182,6 +191,7 @@
       <a class='btn-outline' data-en='Explore Products' data-zh='探索產品' href='/products'>探索產品</a>
     </div>
   </div>
+  <a class="hx-scroll" href="#fx10-showcase"><span data-zh="向下探索" data-en="Scroll">向下探索</span><i></i></a>
 </section>
 
 <!-- STATS -->
@@ -207,6 +217,32 @@
     </div>
   </div>
 </section>
+
+<!-- R10:BEGIN 原廠 FX 系列活動標語 -->
+<div class="mq" aria-hidden="true"><div class="mq-track"><span>Performance Critical</span><i>／</i><span>Mission Critical</span><i>／</i><span>Zero Compromise</span><i>／</i><span>If it has to work, it starts here</span><i>／</i><span>Performance Critical</span><i>／</i><span>Mission Critical</span><i>／</i><span>Zero Compromise</span><i>／</i><span>If it has to work, it starts here</span><i>／</i><span>Performance Critical</span><i>／</i><span>Mission Critical</span><i>／</i><span>Zero Compromise</span><i>／</i><span>If it has to work, it starts here</span><i>／</i><span>Performance Critical</span><i>／</i><span>Mission Critical</span><i>／</i><span>Zero Compromise</span><i>／</i><span>If it has to work, it starts here</span><i>／</i></div></div>
+<!-- R10:END -->
+
+<!-- R10:BEGIN FX10 展示區 -->
+<section class="sx" id="fx10-showcase">
+  <div class="sx-bg" aria-hidden="true"><img src="images/home-fx10-exploded.jpg" alt="" loading="lazy" width="2400" height="1350"></div>
+  <div class="sx-inner">
+    <div class="sx-copy">
+      <p class="section-label" data-zh="FX10 ・ 工業級複材＋金屬 3D 列印" data-en="FX10 · Industrial composite + metal 3D printing">FX10 ・ 工業級複材＋金屬 3D 列印</p>
+      <h2 class="sx-title" data-zh="不能出錯的零件，<br><span class='hl'>從這裡開始。</span>" data-en="If it has to work,<br><span class='hl'>it starts here.</span>">不能出錯的零件，<br><span class='hl'>從這裡開始。</span></h2>
+      <p class="sx-lead" data-zh="FX10 把連續碳纖維複材與金屬列印放進同一台機器、放在工廠現場。隔夜印好的治具、可直接焊接的 316L 法蘭、取得澳洲民航核准的直升機風管，都出自這台機器。" data-en="FX10 puts continuous carbon fiber composites and metal printing on one machine, on the factory floor. Fixtures printed overnight, weld-ready 316L flanges, CASA-approved helicopter ducting: all made on this machine.">FX10 把連續碳纖維複材與金屬列印放進同一台機器、放在工廠現場。隔夜印好的治具、可直接焊接的 316L 法蘭、取得澳洲民航核准的直升機風管，都出自這台機器。</p>
+      <div class="sx-feats">
+        <div><b data-zh="一機雙料" data-en="Composites and metal">一機雙料</b><span data-zh="連續碳纖維複材印治具與零件；換上 Metal Kit，同一台印 316L、17-4PH 與 H13" data-en="Continuous-fiber composite fixtures and parts; swap in the Metal Kit and the same machine prints 316L, 17-4PH and H13">連續碳纖維複材印治具與零件；換上 Metal Kit，同一台印 316L、17-4PH 與 H13</span></div>
+        <div><b data-zh="邊印邊量" data-en="Measures while it prints">邊印邊量</b><span data-zh="列印頭上的雷射測微器在列印中掃描零件，搭配 Inspection 軟體驗證尺寸" data-en="A printhead-mounted laser micrometer scans parts during printing for dimensional checks in Inspection">列印頭上的雷射測微器在列印中掃描零件，搭配 Inspection 軟體驗證尺寸</span></div>
+        <div><b data-zh="為工廠設計" data-en="Built for the floor">為工廠設計</b><span data-zh="腔體加熱至 60 °C、自動調平與自動換料、單相一般插座供電" data-en="Chamber heated to 60 °C, automatic leveling and material changeover, single-phase wall power">腔體加熱至 60 °C、自動調平與自動換料、單相一般插座供電</span></div>
+      </div>
+      <div class="sx-btns">
+        <a class="btn-primary" href="fx10.html" data-zh="了解 FX10" data-en="Explore FX10">了解 FX10</a>
+        <a class="btn-outline" href="https://news.markforged.tw/fx10-it-starts-here.html" data-href-zh="https://news.markforged.tw/fx10-it-starts-here.html" data-href-en="https://news.markforged.tw/fx10-it-starts-here-en.html" data-zh="看 FX10 原廠案例 →" data-en="See FX10 cases →">看 FX10 原廠案例 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- R10:END -->
 
 <!-- WHY MARKFORGED -->
 <section style="background:#fff;">
@@ -460,7 +496,7 @@ html[lang="en"] .brian-film-en { display:block !important; }
 
 <!-- FX10 台灣體驗日 VIP 專區 -->
 <section id="vip-section" style="background:#000;border-top:4px solid #FFFF00;border-bottom:4px solid #FFFF00;overflow:hidden;position:relative;">
-  <div style="position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,0,0.03) 40px,rgba(255,255,0,0.03) 80px);pointer-events:none;"></div>
+  <div class="vip-stripes" style="position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,0,0.03) 40px,rgba(255,255,0,0.03) 80px);pointer-events:none;"></div>
   <div class="vip-grid">
 
     <!-- 左欄：文字 -->
@@ -524,5 +560,6 @@ html[lang="en"] .brian-film-en { display:block !important; }
 
 <div id="footer-slot"></div>
 <script src="shared.js?v=20260328b"></script>
+<script src="home-motion.js?v=20261111" defer></script>
 </body>
 </html>
