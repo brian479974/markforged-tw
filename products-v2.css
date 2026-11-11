@@ -1,0 +1,102 @@
+/* ================================================================
+   products-v2.css — 產品總覽頁新版（第十三輪 · 2026-11-11）
+   深色展示風：四台機器同台陳列 → 黏頂機型切換 → 每台一段全寬章節（大圖展台＋規格卡）
+   品牌：黑／白／製造黃 #FFFF00。動態沿用 home-motion（data-mo 進場、減少動態全關）。
+   ================================================================ */
+body { background: #000; }
+
+/* ─── 主視覺：同台陳列 ─── */
+.pv-hero { position: relative; background: #000; padding: calc(var(--nav-h) + 52px) 32px 0; overflow: hidden; isolation: isolate; }
+.pv-hero::before { content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: radial-gradient(ellipse 60% 55% at 50% 78%, rgba(255,255,0,.07), rgba(0,0,0,0) 65%),
+              linear-gradient(180deg, #000 0%, #050505 60%, #000 100%); }
+.pv-hero-in { max-width: 1200px; margin: 0 auto; text-align: center; }
+.pv-hero .breadcrumb { font-size: 12px; color: #666; margin-bottom: 22px; }
+.pv-hero .breadcrumb a { color: #FFFF00; text-decoration: none; }
+.pv-hero .breadcrumb a::after { content: ' / '; color: #333; }
+.pv-hero .section-label { color: #FFFF00; letter-spacing: 5px; }
+.pv-hero h1 { color: #fff; font-size: clamp(34px, 4.8vw, 68px); font-weight: 900; line-height: 1.05; letter-spacing: -.02em; margin: 6px 0 20px; }
+.pv-hero h1 em { color: #FFFF00; font-style: normal; }
+.pv-hero-in > p:last-child { color: #b9bec3; font-size: clamp(15px, 1.3vw, 18px); max-width: 640px; margin: 0 auto; line-height: 1.7; }
+.mo .pv-hero-in > * { opacity: 0; transform: translateY(28px); animation: pv-in 1.1s cubic-bezier(.16,1,.3,1) forwards; }
+.mo .pv-hero-in > *:nth-child(2) { animation-delay: .12s; } .mo .pv-hero-in > *:nth-child(3) { animation-delay: .24s; } .mo .pv-hero-in > *:nth-child(4) { animation-delay: .36s; }
+@keyframes pv-in { to { opacity: 1; transform: none; } }
+
+.pv-lineup { max-width: 1000px; margin: 36px auto 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; align-items: end; }
+.pv-lu-i { position: relative; display: flex; flex-direction: column; align-items: center; text-decoration: none; padding-bottom: 34px; }
+.pv-lu-img { position: relative; display: block; width: 100%; aspect-ratio: 4 / 5; overflow: hidden;
+  -webkit-mask-image: radial-gradient(ellipse 58% 60% at 50% 50%, #000 66%, transparent 100%); mask-image: radial-gradient(ellipse 58% 60% at 50% 50%, #000 66%, transparent 100%); }
+.pv-lu-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .9s cubic-bezier(.16,1,.3,1), filter .6s; filter: brightness(.88); }
+.pv-lu-i:hover .pv-lu-img img { transform: scale(1.04) translateY(-6px); filter: brightness(1.05); }
+.pv-lu-i::after { content: ''; position: absolute; left: 18%; right: 18%; bottom: 58px; height: 14px; border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(255,255,0,.22), rgba(255,255,0,0) 70%); filter: blur(4px); opacity: .5; transition: opacity .5s; }
+.pv-lu-i:hover::after { opacity: 1; }
+.pv-lu-n { margin-top: 14px; color: #FFFF00; font-size: 11px; font-weight: 700; letter-spacing: 3px; }
+.pv-lu-name { margin-top: 4px; color: #fff; font-size: clamp(14px, 1.3vw, 18px); font-weight: 800; letter-spacing: .02em; transition: color .3s; }
+.pv-lu-i:hover .pv-lu-name { color: #FFFF00; }
+.mo .pv-lu-i[data-mo] { transition-duration: 1.3s; transition-delay: calc(.5s + var(--i, 0) * 140ms); }
+.mo .pv-lu-i[data-mo]:not(.in) { transform: translateY(60px); }
+
+/* ─── 黏頂機型切換列 ─── */
+.pv-sub { position: sticky; top: var(--nav-h); z-index: 50; background: rgba(0,0,0,.82); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  border-top: 1px solid #161616; border-bottom: 1px solid #161616; }
+.pv-sub-in { max-width: 1200px; margin: 0 auto; display: flex; justify-content: center; gap: 4px; overflow-x: auto; scrollbar-width: none; padding: 0 16px; }
+.pv-sub-in::-webkit-scrollbar { display: none; }
+.pv-sub a { position: relative; flex: none; padding: 16px 18px; color: #9aa0a6; font-size: 13px; font-weight: 700; letter-spacing: .06em; text-decoration: none; white-space: nowrap; transition: color .3s; }
+.pv-sub a::after { content: ''; position: absolute; left: 18px; right: 18px; bottom: 0; height: 2px; background: #FFFF00; transform: scaleX(0); transition: transform .45s cubic-bezier(.7,0,.2,1); }
+.pv-sub a:hover, .pv-sub a.on { color: #fff; }
+.pv-sub a.on::after { transform: scaleX(1); }
+
+/* ─── 產品章節 ─── */
+.pv-ch { position: relative; background: #000; color: #fff; padding: 120px 32px; scroll-margin-top: calc(var(--nav-h) + 52px); overflow: hidden; }
+.pv-ch:nth-of-type(even) { background: #070707; }
+.pv-ch + .pv-ch { border-top: 1px solid #141414; }
+.pv-in { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.05fr 1fr; gap: 72px; align-items: center; }
+.pv-ch.flip .pv-stage { order: 2; }
+.pv-stage { position: relative; aspect-ratio: 4 / 5; max-height: 640px; justify-self: center; width: 100%; max-width: 520px; }
+.pv-ch.wide .pv-stage { aspect-ratio: 16 / 9; max-width: none; max-height: none; }
+.pv-stage img { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: cover; will-change: transform;
+  -webkit-mask-image: radial-gradient(ellipse 72% 70% at 50% 46%, #000 62%, transparent 100%); mask-image: radial-gradient(ellipse 72% 70% at 50% 46%, #000 62%, transparent 100%); }
+.pv-ch.wide .pv-stage img { -webkit-mask-image: none; mask-image: none; border: 1px solid #1d1d1d; }
+.pv-glow { position: absolute; inset: 8% 4% -4%; z-index: 0; border-radius: 50%; background: radial-gradient(ellipse at 50% 70%, rgba(255,255,0,.10), rgba(255,255,0,0) 62%); filter: blur(10px); }
+.mo .pv-stage[data-mo] img { clip-path: inset(100% 0 0 0); transform: scale(1.06); transition: clip-path 1.4s cubic-bezier(.7,0,.2,1), transform 1.6s cubic-bezier(.16,1,.3,1); }
+.mo .pv-stage[data-mo].in img { clip-path: inset(0 0 0 0); transform: none; }
+
+.pv-idx { font-size: 56px; font-weight: 900; line-height: 1; color: transparent; -webkit-text-stroke: 1px rgba(255,255,0,.75); margin-bottom: 18px; font-variant-numeric: tabular-nums; }
+.pv-idx span { font-size: 13px; letter-spacing: 3px; color: #555; -webkit-text-stroke: 0; margin-left: 10px; vertical-align: middle; }
+.pv-tag { display: inline-block; background: #FFFF00; color: #000; font-size: 11px; font-weight: 900; letter-spacing: 2px; padding: 5px 12px; margin-bottom: 18px; }
+.pv-name { color: #fff; font-size: clamp(36px, 4.4vw, 64px); font-weight: 900; line-height: 1.02; letter-spacing: -.02em; margin: 0 0 22px; }
+.pv-desc { color: #bfc4c9; font-size: 16px; line-height: 1.8; margin: 0 0 34px; max-width: 560px; }
+.pv-specs { list-style: none; margin: 0 0 38px; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: #1c1c1c; border: 1px solid #1c1c1c; }
+.pv-spec { background: #0b0b0b; padding: 18px 20px; display: flex; flex-direction: column; justify-content: center; gap: 6px; min-height: 84px; position: relative; }
+.pv-spec::before { content: ''; position: absolute; left: 0; top: 18px; bottom: 18px; width: 2px; background: #FFFF00; transform: scaleY(0); transform-origin: 50% 0; transition: transform .8s cubic-bezier(.7,0,.2,1) calc(var(--i, 0) * 90ms + .3s); }
+.pv-specs.in .pv-spec::before { transform: scaleY(1); }
+.pv-spec small { color: #8b9196; font-size: 12px; letter-spacing: .08em; }
+.pv-spec b { color: #fff; font-size: 15px; font-weight: 700; line-height: 1.45; }
+.pv-spec.kv b { font-size: 17px; }
+.mo .pv-specs .pv-spec { opacity: 0; transform: translateY(18px); transition: opacity .8s ease, transform .9s cubic-bezier(.16,1,.3,1); transition-delay: calc(var(--i, 0) * 90ms); }
+.mo .pv-specs.in .pv-spec { opacity: 1; transform: none; }
+.pv-cta { display: inline-block; }
+
+@media (max-width: 900px) {
+  .pv-hero { padding: calc(var(--nav-h) + 44px) 18px 0; }
+  .pv-lineup { grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 36px; }
+  .pv-lu-i { padding-bottom: 22px; }
+  .pv-lu-i::after { bottom: 44px; }
+  .pv-lu-name { font-size: 11px; text-align: center; }
+  .pv-lu-n { font-size: 10px; letter-spacing: 2px; }
+  .pv-sub-in { justify-content: flex-start; }
+  .pv-sub a { padding: 14px 12px; font-size: 12px; }
+  .pv-sub a::after { left: 12px; right: 12px; }
+  .pv-ch { padding: 72px 20px; }
+  .pv-in { grid-template-columns: 1fr; gap: 36px; }
+  .pv-ch.flip .pv-stage { order: 0; }
+  .pv-stage { max-width: 360px; }
+  .pv-idx { font-size: 44px; }
+  .pv-specs { grid-template-columns: 1fr; }
+  .pv-spec { min-height: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pv-hero-in > *, .pv-lu-i, .pv-stage img, .pv-spec, .pv-spec::before { animation: none !important; transition: none !important; opacity: 1 !important; transform: none !important; clip-path: none !important; }
+}
+.mo-fallback .pv-hero-in > *, .mo-fallback .pv-spec, .mo-fallback .pv-stage img { opacity: 1 !important; transform: none !important; clip-path: none !important; }

@@ -19,7 +19,7 @@
   ];
   GROUPS.forEach(function (g) {
     document.querySelectorAll(g[0]).forEach(function (el) {
-      if (el.closest('.hx') || el.hasAttribute('data-mo')) return;
+      if (el.closest('.hx, .pv-hero') || el.hasAttribute('data-mo')) return;
       el.setAttribute('data-mo', g[1]);
       // 同一個父層裡的兄弟依序延遲（最多 5 階）
       var sibs = Array.prototype.filter.call(el.parentNode.children, function (s) { return s.matches(g[0]); });
